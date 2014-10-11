@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Backbone Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Backbone demo...</h1>
+    <p>
+      This page demonstrates the use of Backbone views.
+    </p>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <table id="employee-table"
+          class="table table-compact table-bordered table-striped" >
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Sales YTD</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</body>
+<script id="employee-template" type="text/x-template">
+  <td><%= id %></td>
+  <td><%= firstName %></td>
+  <td><%= lastName %></td>
+  <td><%= salesYtd %></td>
+</script>
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/underscore-min.js"></script>
+<script src="js/vendor/backbone-min.js"></script>
+<script src="js/vendor/coffee-script.min.js"></script>
+<script type="text/coffeescript" src="coffee/app.coffee">
+</script>
+<script type="text/coffeescript" src="coffee/model.coffee">
+</script>
+<script type="text/coffeescript" src="coffee/collection.coffee">
+</script>
+<script type="text/coffeescript" src="coffee/view.coffee">
+</script>
+<script type="text/coffeescript">
+  empCol = new app.collections.EmployeeList [
+    { id: 1, firstName: "Tracy", lastName: "Ouellette", salesYtd: 22246 }
+    { id: 2, firstName: "Chris", lastName: "Daniel", salesYtd: 3876 }
+    { id: 3, firstName: "Jason", lastName: "Alexander", salesYtd: 4095 }
+    { id: 4, firstName: "Jennifer", lastName: "Hannah", salesYtd: 8070 }
+    { id: 5, firstName: "Maxx", lastName: "Slayde", salesYtd: 2032 }
+  ]
+
+  listView = new app.views.EmployeeListView
+    el: ($ '#employee-table tbody')
+    model: empCol
+
+  listView.render()
+</script>
+</html>

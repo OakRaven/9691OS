@@ -1,0 +1,21 @@
+{
+  "name": "jasmine",
+  "version": "1.0.0",
+  "description": "Demonstration of using CoffeeScript with Jasmine.",
+  "authors": [
+    "M. W. Hatfield <mwhatfield@outlook.com>"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "coffeescript": "~1.7.1",
+    "jasmine": "~2.0.4"
+  }
+}

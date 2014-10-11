@@ -1,0 +1,24 @@
+{
+  "name": "working_with_jquery",
+  "version": "1.0.0",
+  "description": "Demonstration of using CoffeeScript with jQuery.",
+  "authors": [
+    "M. W. Hatfield <mwhatfield@outlook.com>"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "handlebars": "~1.1.2",
+    "bootstrap": "~3.0.1",
+    "jquery-ui": "~1.10.3",
+    "underscore": "~1.5.2"
+  }
+}

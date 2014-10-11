@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Backbone Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    label.highlighted {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Backbone demo...</h1>
+    <p>
+      This page demonstrates the use of Backbone UI events.
+    </p>
+    <hr>
+    <div class="row">
+      <div class="col-sm-6">
+        <div id="emp-edit-container"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script id="employee-edit-template" type="text/x-template">
+  <div id="emp-edit">
+    <div class="row">
+      <div class="col-sm-4"><label>First name:</label></div>
+      <div class="col-sm-6">
+        <input type="text" id="firstName" value="<%= firstName %>">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4"><label>Last name:</label></div>
+      <div class="col-sm-6">
+        <input type="text" id="lastName" value="<%= lastName %>">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4"><label>Sales YTD:</label></div>
+      <div class="col-sm-6">
+        <input type="text" id="salesYtd" value="<%= salesYtd %>">
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-primary" data-id="<%= id %>">
+        Update
+      </button>
+    </div>
+  </div>
+</script>
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/underscore-min.js"></script>
+<script src="js/vendor/backbone-min.js"></script>
+<script src="js/vendor/coffee-script.min.js"></script>
+<script type="text/coffeescript" src="coffee/app.coffee">
+</script>
+<script type="text/coffeescript" src="coffee/model.coffee">
+</script>
+<script type="text/coffeescript" src="coffee/view-events.coffee">
+<script type="text/coffeescript">
+</script>
+</html>

@@ -1,0 +1,3 @@
+http://backbonejs.org/#Collection-models
+http://adamjspooner.github.io/coffeescript-meet-backbonejs/05/docs/script.html
+http://localhost:8000/models_demo.html

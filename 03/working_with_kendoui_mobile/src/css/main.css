@@ -1,0 +1,49 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+.km-ios7 .km-actionsheet>li:first-child {
+  margin-bottom: 0;
+}
+.km-ios #listview .km-navbar, .km-ios #detailview .km-navbar {
+  background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, rgba(255, 255, 255, 0.5)), color-stop(0.06, rgba(255, 255, 255, 0.45)), color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(1, rgba(100, 100, 100, 0))), url(../../content/shared/images/patterns/pattern1.png);
+  background: -moz-linear-gradient(center top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.45) 6%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(100, 100, 100, 0)), url(../../content/shared/images/patterns/pattern1.png);
+}
+.km-ios #listview .km-navbar .km-button, .km-ios #listview .km-navbar .km-button {
+  background-color: #000;
+}
+.km-ios #detailview #done {
+  background-color: Green;
+}
+.km-tablet .km-ios #edit-listview .km-view-title, .km-tablet .km-ios #detailview .km-view-title {
+  color: #fff;
+  text-shadow: 0 -1px rgba(0, 0, 0, .5);
+}
+.km-ios #listview .km-content, .km-ios #detailview .km-content, .km-ios #detailview .km-insetcontent, .km-ios #listview li, .km-ios #detailview li {
+  background: #373737;
+}
+.km-ios #listview li > a, .km-ios #detailview li, .km-ios #detailview input, .km-ios #detailview li > a {
+  text-decoration: none;
+  color: #fff;
+}
+.km-ios #listview .km-listinset > li, .km-ios #detailview .km-listgroupinset .km-list > li, .km-ios #detailview .km-listinset > li:first-child, .km-ios #detailview .km-listgroupinset .km-list > li:first-child, .km-ios #detailview .km-listinset > li:last-child, .km-ios #detailview .km-listgroupinset .km-list > li:last-child {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-color: #565656;
+}
+.km-ios #detailview .km-listinset > li:first-child, .km-ios #detailview .km-listgroupinset .km-list > li:first-child {
+  border-width: 1px;
+}
+.km-ios #detailview .km-listinset > li, .km-ios #detailview .km-listgroupinset .km-list > li {
+  border-width: 0 1px 1px;
+}
+#listview .delete {
+  display:none;
+  position: absolute;
+  top: .15em;
+  right: .5em;
+  width: 60px;
+  background-color: #bd2729;
+  color: #fff;
+}

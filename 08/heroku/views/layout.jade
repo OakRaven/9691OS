@@ -1,0 +1,34 @@
+doctype
+html
+  head
+    title #{title} - My Site
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    .container
+      nav.navbar.navbar-default(role='navigation')
+        .navbar-header
+          button.navbar-toggle(type='button', data-target='#navbarCollapse', data-toggle='collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Heroku Sample
+
+        #navbarCollapse.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='#') Home
+            li
+              a(href='#') Profile
+            li
+              a(href="#") Messages
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="#") Login
+
+      .row
+        .col-md-9
+          block content
+        .col-md-3
+          block sidebar

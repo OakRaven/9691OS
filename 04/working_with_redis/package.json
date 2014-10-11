@@ -1,0 +1,12 @@
+{
+  "name": "working_with_redis",
+  "version": "1.0.0",
+  "description": "Demonstrating the use of CoffeeScript with Redis",
+  "dependencies": {
+    "redis": "^0.12.1",
+    "sqlite3": "^3.0.2"
+  },
+  "devDependencies": {},
+  "author": "M. W. Hatfield <mwhatfield@outlook.com>",
+  "license": "ISC"
+}

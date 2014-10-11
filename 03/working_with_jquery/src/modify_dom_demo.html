@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Modifying DOM</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <style>
+      label.completed {
+        text-decoration: line-through;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Modifying DOM...</h1>
+      <p>This page demonstrates the sample code for modifying the
+        DOM.</p>
+      <div class="input-group">
+        <input type="text" id="todo-description"
+          placeholder="description..." class="form-control">
+        <span class="input-group-btn">
+          <button id="add-button" class="btn btn-default"
+            type="button">Add</button>
+        </span>
+      </div>
+      <br>
+      <div id="action-items">
+        <ul id="todo-list" class="list-group">
+          <li class="list-group-item">
+            <label>
+            <input type="checkbox" class="complete-checkbox">
+            Pick up milk
+            </label>
+            <button class="delete-button btn btn-danger btn-xs">Delete</button>
+          </li>
+          <li class="list-group-item">
+            <label>
+            <input type="checkbox" class="complete-checkbox">
+            Take the car in for an oil change
+            </label>
+            <button class="delete-button btn btn-danger btn-xs">Delete</button>
+          </li>
+          <li class="list-group-item">
+            <label>
+            <input type="checkbox" class="complete-checkbox">
+            Pick up tickets for Jenn's show
+            </label>
+            <button class="delete-button btn btn-danger btn-xs">Delete</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/modifying_dom.js"></script>
+</html>

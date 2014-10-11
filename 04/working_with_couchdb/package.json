@@ -1,0 +1,11 @@
+{
+  "name": "working_with_couchdb",
+  "version": "1.0.0",
+  "description": "Demonstrating the use of CoffeeScript with CouchDB",
+  "dependencies": {
+    "cradle": "^0.6.7"
+  },
+  "devDependencies": {},
+  "author": "M. W. Hatfield <mwhatfield@outlook.com>",
+  "license": "ISC"
+}

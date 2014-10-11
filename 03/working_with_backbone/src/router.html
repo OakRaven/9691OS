@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Backbone Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Backbone demo...</h1>
+    <p>
+      This page demonstrates the use of Backbone UI events.
+    </p>
+    <hr>
+    <a href="#/">Display employee list</a> <br>
+    <a href="#/employees/45">Display single employee</a> <br>
+    <a href="#/employees/45/departments/3">
+      Display single employee department</a> <br>
+    <a href="#/payroll/giveRaise/1,2,3,4,5">Give employees raises</a>
+    <div>
+      <h2>Output</h2>
+      <div class="well">
+        <ul id="output-list"></ul>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/underscore-min.js"></script>
+<script src="js/vendor/backbone-min.js"></script>
+<script src="js/vendor/coffee-script.min.js"></script>
+<script type="text/coffeescript" src="coffee/app.coffee">
+</script>
+<script type="text/coffeescript" src="coffee/router.coffee">
+<script type="text/coffeescript">
+</script>
+</html>

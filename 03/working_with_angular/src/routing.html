@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>AngularJS Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+  }
+  .numeric {
+    text-align: right;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>AngularJS demo...</h1>
+    <p>
+      This page demonstrates using AngularJS routing.
+    </p>
+    <a href="#/page-a/23">Load page A</a> <br>
+    <a href="#/page-b/72">Load page B</a>
+    <hr>
+    <div ng-view></div>
+  </div>
+</body>
+<script src="js/vendor/angular.min.js"></script>
+<script src="js/vendor/angular-route.min.js"></script>
+<script src="js/vendor/coffee-script.min.js"></script>
+<script type="text/coffeescript" src="coffee/routing.coffee"></script>
+<script type="text/coffeescript">
+angular.bootstrap document, ['demoApp']
+</script>
+</html>

@@ -1,0 +1,212 @@
+objc[42804]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-12-15 12:29:05.950 HelloCordova[42804:80b] Cannot find executable for CFBundle 0xa735bf0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-12-15 12:29:05.962 HelloCordova[42804:80b] Cannot find executable for CFBundle 0xa963a30 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-12-15 12:29:06.018 HelloCordova[42804:80b] Multi-tasking -> Device: YES, App: YES
+2013-12-15 12:29:06.135 HelloCordova[42804:80b] Unlimited access to network resources
+2013-12-15 12:29:09.465 HelloCordova[42804:80b] Resetting plugins due to page load.
+2013-12-15 12:29:11.773 HelloCordova[42804:80b] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/F0CAA0A1-15EE-4554-8FA2-50D2FD76B6BD/HelloCordova.app/www/index.html
+2013-12-15 12:29:31.286 HelloCordova[42804:80b] Camera.getPicture: source type 1 not available.
+2013-12-15 12:29:33.928 HelloCordova[42804:80b] THREAD WARNING: ['Camera'] took '2642.827148' ms. Plugin should use a background thread.
+2013-12-15 12:29:37.987 HelloCordova[42804:80b] Camera.getPicture: source type 1 not available.
+2013-12-15 12:29:40.173 HelloCordova[42804:80b] THREAD WARNING: ['Camera'] took '2186.020996' ms. Plugin should use a background thread.
+2013-12-15 12:32:10.945 HelloCordova[43171:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 12:32:10.994 HelloCordova[43171:a07] Unlimited access to network resources
+2013-12-15 12:32:11.692 HelloCordova[43171:a07] Resetting plugins due to page load.
+2013-12-15 12:32:12.239 HelloCordova[43171:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/F3BFB619-D4AB-4205-9FB7-3A198CAEBD1E/HelloCordova.app/www/index.html
+2013-12-15 12:32:19.275 HelloCordova[43171:a07] Camera.getPicture: source type 1 not available.
+2013-12-15 12:32:20.724 HelloCordova[43171:a07] THREAD WARNING: ['Camera'] took '1448.559814' ms. Plugin should use a background thread.
+2013-12-15 12:32:22.808 HelloCordova[43171:a07] THREAD WARNING: ['Geolocation'] took '101.032959' ms. Plugin should use a background thread.
+2013-12-15 12:42:39.809 HelloCordova[43960:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 12:42:39.815 HelloCordova[43960:a07] Unlimited access to network resources
+2013-12-15 12:42:39.848 HelloCordova[43960:a07] Resetting plugins due to page load.
+2013-12-15 12:42:40.276 HelloCordova[43960:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/F3BFB619-D4AB-4205-9FB7-3A198CAEBD1E/HelloCordova.app/www/index.html
+2013-12-15 12:52:48.109 HelloCordova[44659:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 12:52:48.119 HelloCordova[44659:a07] Unlimited access to network resources
+2013-12-15 12:52:48.160 HelloCordova[44659:a07] Resetting plugins due to page load.
+2013-12-15 12:52:48.439 HelloCordova[44659:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/F3BFB619-D4AB-4205-9FB7-3A198CAEBD1E/HelloCordova.app/www/index.html
+2013-12-15 12:53:04.242 HelloCordova[44659:a07] Camera.getPicture: source type 1 not available.
+2013-12-15 12:53:05.814 HelloCordova[44659:a07] THREAD WARNING: ['Camera'] took '1571.881104' ms. Plugin should use a background thread.
+2013-12-15 12:54:31.179 HelloCordova[45004:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 12:54:31.186 HelloCordova[45004:a07] Unlimited access to network resources
+2013-12-15 12:54:31.220 HelloCordova[45004:a07] Resetting plugins due to page load.
+2013-12-15 12:54:31.505 HelloCordova[45004:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/F3BFB619-D4AB-4205-9FB7-3A198CAEBD1E/HelloCordova.app/www/index.html
+2013-12-15 12:54:35.347 HelloCordova[45004:a07] Camera.getPicture: source type 1 not available.
+2013-12-15 12:54:37.831 HelloCordova[45004:a07] THREAD WARNING: ['Camera'] took '2484.434082' ms. Plugin should use a background thread.
+2013-12-15 13:13:42.996 HelloCordova[45815:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:13:43.006 HelloCordova[45815:a07] Unlimited access to network resources
+2013-12-15 13:13:43.050 HelloCordova[45815:a07] Resetting plugins due to page load.
+2013-12-15 13:13:43.346 HelloCordova[45815:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/F3BFB619-D4AB-4205-9FB7-3A198CAEBD1E/HelloCordova.app/www/index.html
+2013-12-15 13:15:42.298 HelloCordova[46184:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:15:42.307 HelloCordova[46184:a07] Unlimited access to network resources
+2013-12-15 13:15:42.348 HelloCordova[46184:a07] Resetting plugins due to page load.
+2013-12-15 13:15:42.671 HelloCordova[46184:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/F3BFB619-D4AB-4205-9FB7-3A198CAEBD1E/HelloCordova.app/www/index.html
+2013-12-15 13:18:59.987 HelloCordova[46539:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:18:59.993 HelloCordova[46539:a07] Unlimited access to network resources
+2013-12-15 13:19:00.024 HelloCordova[46539:a07] Resetting plugins due to page load.
+2013-12-15 13:19:00.400 HelloCordova[46539:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/F3BFB619-D4AB-4205-9FB7-3A198CAEBD1E/HelloCordova.app/www/index.html
+2013-12-15 13:23:10.610 HelloCordova[47227:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:23:10.616 HelloCordova[47227:a07] Unlimited access to network resources
+2013-12-15 13:23:10.641 HelloCordova[47227:a07] Resetting plugins due to page load.
+2013-12-15 13:23:11.033 HelloCordova[47227:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/F3BFB619-D4AB-4205-9FB7-3A198CAEBD1E/HelloCordova.app/www/index.html
+2013-12-15 13:23:32.087 HelloCordova[47227:a07] Camera.getPicture: source type 1 not available.
+2013-12-15 13:23:33.631 HelloCordova[47227:a07] THREAD WARNING: ['Camera'] took '1543.645752' ms. Plugin should use a background thread.
+2013-12-15 13:28:28.227 HelloCordova[47661:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:28:28.240 HelloCordova[47661:a07] Unlimited access to network resources
+2013-12-15 13:28:28.307 HelloCordova[47661:a07] Resetting plugins due to page load.
+2013-12-15 13:28:28.606 HelloCordova[47661:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/F3BFB619-D4AB-4205-9FB7-3A198CAEBD1E/HelloCordova.app/www/index.html
+2013-12-15 13:29:12.917 HelloCordova[47661:a07] Camera.getPicture: source type 1 not available.
+2013-12-15 13:29:14.302 HelloCordova[47661:a07] THREAD WARNING: ['Camera'] took '1385.312012' ms. Plugin should use a background thread.
+2013-12-15 13:35:25.467 HelloCordova[48197:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:35:25.478 HelloCordova[48197:a07] Unlimited access to network resources
+2013-12-15 13:35:25.620 HelloCordova[48197:a07] Resetting plugins due to page load.
+2013-12-15 13:35:25.942 HelloCordova[48197:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 13:37:30.544 HelloCordova[48594:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:37:30.550 HelloCordova[48594:a07] Unlimited access to network resources
+2013-12-15 13:37:30.577 HelloCordova[48594:a07] Resetting plugins due to page load.
+2013-12-15 13:37:30.982 HelloCordova[48594:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 13:39:12.485 HelloCordova[48938:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:39:12.495 HelloCordova[48938:a07] Unlimited access to network resources
+2013-12-15 13:39:12.542 HelloCordova[48938:a07] Resetting plugins due to page load.
+2013-12-15 13:39:12.823 HelloCordova[48938:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 13:42:58.361 HelloCordova[49625:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:42:58.370 HelloCordova[49625:a07] Unlimited access to network resources
+2013-12-15 13:42:58.438 HelloCordova[49625:a07] Resetting plugins due to page load.
+2013-12-15 13:42:58.734 HelloCordova[49625:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 13:46:22.020 HelloCordova[49625:a07] Camera.getPicture: source type 1 not available.
+2013-12-15 13:46:23.275 HelloCordova[49625:a07] THREAD WARNING: ['Camera'] took '1255.460693' ms. Plugin should use a background thread.
+2013-12-15 13:53:38.560 HelloCordova[50201:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:53:38.566 HelloCordova[50201:a07] Unlimited access to network resources
+2013-12-15 13:53:38.611 HelloCordova[50201:a07] Resetting plugins due to page load.
+2013-12-15 13:53:38.906 HelloCordova[50201:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 13:57:00.555 HelloCordova[50832:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 13:57:00.564 HelloCordova[50832:a07] Unlimited access to network resources
+2013-12-15 13:57:00.623 HelloCordova[50832:a07] Resetting plugins due to page load.
+2013-12-15 13:57:00.910 HelloCordova[50832:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 14:01:08.390 HelloCordova[51653:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 14:01:08.399 HelloCordova[51653:a07] Unlimited access to network resources
+2013-12-15 14:01:08.443 HelloCordova[51653:a07] Resetting plugins due to page load.
+2013-12-15 14:01:08.741 HelloCordova[51653:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 14:02:32.708 HelloCordova[52005:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 14:02:32.717 HelloCordova[52005:a07] Unlimited access to network resources
+2013-12-15 14:02:32.779 HelloCordova[52005:a07] Resetting plugins due to page load.
+2013-12-15 14:02:33.062 HelloCordova[52005:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 14:09:15.964 HelloCordova[52724:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 14:09:15.970 HelloCordova[52724:a07] Unlimited access to network resources
+2013-12-15 14:09:16.015 HelloCordova[52724:a07] Resetting plugins due to page load.
+2013-12-15 14:09:16.327 HelloCordova[52724:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 14:19:19.443 HelloCordova[53184:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 14:19:19.453 HelloCordova[53184:a07] Unlimited access to network resources
+2013-12-15 14:19:19.487 HelloCordova[53184:a07] Resetting plugins due to page load.
+2013-12-15 14:19:19.793 HelloCordova[53184:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 14:23:49.721 HelloCordova[54517:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 14:23:49.727 HelloCordova[54517:a07] Unlimited access to network resources
+2013-12-15 14:23:49.772 HelloCordova[54517:a07] Resetting plugins due to page load.
+2013-12-15 14:23:50.065 HelloCordova[54517:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+objc[56424]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-12-15 19:08:12.975 HelloCordova[56424:80b] Cannot find executable for CFBundle 0xa99a900 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-12-15 19:08:12.982 HelloCordova[56424:80b] Cannot find executable for CFBundle 0xa76afa0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-12-15 19:08:13.022 HelloCordova[56424:80b] Multi-tasking -> Device: YES, App: YES
+2013-12-15 19:08:13.076 HelloCordova[56424:80b] Unlimited access to network resources
+2013-12-15 19:08:14.001 HelloCordova[56424:80b] [CDVTimer][splashscreen] 214.015007ms
+2013-12-15 19:08:14.002 HelloCordova[56424:80b] [CDVTimer][TotalPluginStartup] 214.681029ms
+2013-12-15 19:08:14.146 HelloCordova[56424:80b] Resetting plugins due to page load.
+2013-12-15 19:08:15.633 HelloCordova[56424:80b] THREAD WARNING: ['Device'] took '16.626953' ms. Plugin should use a background thread.
+2013-12-15 19:08:15.660 HelloCordova[56424:80b] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/F0CAA0A1-15EE-4554-8FA2-50D2FD76B6BD/HelloCordova.app/www/index.html
+2013-12-15 19:09:52.421 HelloCordova[56788:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 19:09:52.495 HelloCordova[56788:a07] Unlimited access to network resources
+2013-12-15 19:09:53.375 HelloCordova[56788:a07] [CDVTimer][splashscreen] 262.503028ms
+2013-12-15 19:09:53.376 HelloCordova[56788:a07] [CDVTimer][TotalPluginStartup] 263.309956ms
+2013-12-15 19:09:53.482 HelloCordova[56788:a07] Resetting plugins due to page load.
+2013-12-15 19:09:54.477 HelloCordova[56788:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 19:11:07.400 HelloCordova[57143:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 19:11:07.409 HelloCordova[57143:a07] Unlimited access to network resources
+2013-12-15 19:11:07.430 HelloCordova[57143:a07] [CDVTimer][splashscreen] 5.497992ms
+2013-12-15 19:11:07.431 HelloCordova[57143:a07] [CDVTimer][TotalPluginStartup] 6.027997ms
+2013-12-15 19:11:07.453 HelloCordova[57143:a07] Resetting plugins due to page load.
+2013-12-15 19:11:07.729 HelloCordova[57143:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/D33B9809-27AD-4E38-A2DB-BA996E236D14/HelloCordova.app/www/index.html
+2013-12-15 19:11:39.354 HelloCordova[57143:a07] Camera.getPicture: source type 1 not available.
+2013-12-15 19:11:40.703 HelloCordova[57143:a07] THREAD WARNING: ['Camera'] took '1365.520996' ms. Plugin should use a background thread.
+2013-12-15 19:11:41.711 HelloCordova[57143:a07] Camera.getPicture: source type 1 not available.
+2013-12-15 19:11:43.881 HelloCordova[57143:a07] THREAD WARNING: ['Camera'] took '2170.719971' ms. Plugin should use a background thread.
+2013-12-15 19:11:58.726 HelloCordova[57143:a07] Camera.getPicture: source type 1 not available.
+2013-12-15 19:12:00.358 HelloCordova[57143:a07] THREAD WARNING: ['Camera'] took '1631.599121' ms. Plugin should use a background thread.
+objc[57909]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-12-15 20:15:07.528 CS Cookbook[57909:80b] Cannot find executable for CFBundle 0xa6c8100 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-12-15 20:15:07.539 CS Cookbook[57909:80b] Cannot find executable for CFBundle 0xa6e9cb0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-12-15 20:15:07.689 CS Cookbook[57909:80b] Multi-tasking -> Device: YES, App: YES
+2013-12-15 20:15:07.701 CS Cookbook[57909:80b] Unlimited access to network resources
+2013-12-15 20:15:07.716 CS Cookbook[57909:80b] Fix applied for database locations?: YES
+2013-12-15 20:15:07.773 CS Cookbook[57909:80b] [CDVTimer][splashscreen] 40.437043ms
+2013-12-15 20:15:07.774 CS Cookbook[57909:80b] [CDVTimer][TotalPluginStartup] 40.932000ms
+2013-12-15 20:15:07.865 CS Cookbook[57909:80b] Resetting plugins due to page load.
+2013-12-15 20:15:09.499 CS Cookbook[57909:80b] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/46F1850D-52FC-473F-B071-E7DC8A578BDE/CS%20Cookbook.app/www/index.html
+2013-12-15 20:16:26.036 CS Cookbook[57909:80b] THREAD WARNING: ['Geolocation'] took '21.836182' ms. Plugin should use a background thread.
+2013-12-15 20:16:33.622 CS Cookbook[57909:80b] THREAD WARNING: ['Camera'] took '498.573975' ms. Plugin should use a background thread.
+2013-12-15 20:16:41.469 CS Cookbook[57909:80b] Camera.getPicture: source type 1 not available.
+2013-12-15 20:16:43.005 CS Cookbook[57909:80b] THREAD WARNING: ['Camera'] took '1535.757080' ms. Plugin should use a background thread.
+objc[58524]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-12-15 20:56:43.290 CS Cookbook[58524:80b] Cannot find executable for CFBundle 0xa78ef80 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-12-15 20:56:43.300 CS Cookbook[58524:80b] Cannot find executable for CFBundle 0xa8e70d0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-12-15 20:56:43.334 CS Cookbook[58524:80b] Multi-tasking -> Device: YES, App: YES
+2013-12-15 20:56:43.362 CS Cookbook[58524:80b] Unlimited access to network resources
+2013-12-15 20:56:43.750 CS Cookbook[58524:80b] [CDVTimer][splashscreen] 357.526004ms
+2013-12-15 20:56:43.750 CS Cookbook[58524:80b] [CDVTimer][TotalPluginStartup] 357.936025ms
+2013-12-15 20:56:44.064 CS Cookbook[58524:80b] Resetting plugins due to page load.
+2013-12-15 20:56:44.912 CS Cookbook[58524:80b] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/46F1850D-52FC-473F-B071-E7DC8A578BDE/CS%20Cookbook.app/www/index.html
+2013-12-15 21:13:35.928 CS Cookbook[60706:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 21:13:35.965 CS Cookbook[60706:a07] Unlimited access to network resources
+2013-12-15 21:13:35.985 CS Cookbook[60706:a07] [CDVTimer][splashscreen] 4.319012ms
+2013-12-15 21:13:35.985 CS Cookbook[60706:a07] [CDVTimer][TotalPluginStartup] 4.813015ms
+2013-12-15 21:13:36.164 CS Cookbook[60706:a07] Resetting plugins due to page load.
+2013-12-15 21:13:36.479 CS Cookbook[60706:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/72D6FDF0-18BA-4E96-96D9-825DFCAF738D/CS%20Cookbook.app/www/index.html
+2013-12-15 21:26:55.899 CS Cookbook[61338:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 21:26:55.911 CS Cookbook[61338:a07] Unlimited access to network resources
+2013-12-15 21:26:55.930 CS Cookbook[61338:a07] [CDVTimer][splashscreen] 4.444003ms
+2013-12-15 21:26:55.930 CS Cookbook[61338:a07] [CDVTimer][TotalPluginStartup] 4.886985ms
+2013-12-15 21:26:55.947 CS Cookbook[61338:a07] Resetting plugins due to page load.
+2013-12-15 21:26:56.360 CS Cookbook[61338:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/72D6FDF0-18BA-4E96-96D9-825DFCAF738D/CS%20Cookbook.app/www/index.html
+2013-12-15 21:27:25.494 CS Cookbook[61338:a07] THREAD WARNING: ['Geolocation'] took '32.037109' ms. Plugin should use a background thread.
+2013-12-15 21:28:23.561 CS Cookbook[61692:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 21:28:23.568 CS Cookbook[61692:a07] Unlimited access to network resources
+2013-12-15 21:28:23.582 CS Cookbook[61692:a07] [CDVTimer][splashscreen] 4.349947ms
+2013-12-15 21:28:23.583 CS Cookbook[61692:a07] [CDVTimer][TotalPluginStartup] 4.805982ms
+2013-12-15 21:28:23.600 CS Cookbook[61692:a07] Resetting plugins due to page load.
+2013-12-15 21:28:23.902 CS Cookbook[61692:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/72D6FDF0-18BA-4E96-96D9-825DFCAF738D/CS%20Cookbook.app/www/index.html
+2013-12-15 21:28:54.654 CS Cookbook[61692:a07] THREAD WARNING: ['Camera'] took '39.735107' ms. Plugin should use a background thread.
+objc[62869]: Class AXEmojiUtilities is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/AccessibilityUtilities.framework/AccessibilityUtilities and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libAXSpeechManager.dylib. One of the two will be used. Which one is undefined.
+2013-12-15 21:56:50.230 CS Cookbook[62869:80b] Cannot find executable for CFBundle 0xa870fe0 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/GeoServices.axbundle> (not loaded)
+2013-12-15 21:56:50.238 CS Cookbook[62869:80b] Cannot find executable for CFBundle 0xa6afb00 </Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/AccessibilityBundles/CertUIFramework.axbundle> (not loaded)
+2013-12-15 21:56:50.263 CS Cookbook[62869:80b] Multi-tasking -> Device: YES, App: YES
+2013-12-15 21:56:50.519 CS Cookbook[62869:80b] Unlimited access to network resources
+2013-12-15 21:56:54.289 CS Cookbook[62869:80b] [CDVTimer][splashscreen] 1145.857036ms
+2013-12-15 21:56:54.290 CS Cookbook[62869:80b] [CDVTimer][TotalPluginStartup] 1146.292984ms
+2013-12-15 21:56:54.561 CS Cookbook[62869:80b] Resetting plugins due to page load.
+2013-12-15 21:56:57.290 CS Cookbook[62869:80b] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/46F1850D-52FC-473F-B071-E7DC8A578BDE/CS%20Cookbook.app/www/index.html
+2013-12-15 21:59:01.191 CS Cookbook[63237:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 21:59:01.200 CS Cookbook[63237:a07] Unlimited access to network resources
+2013-12-15 21:59:01.222 CS Cookbook[63237:a07] [CDVTimer][splashscreen] 6.058037ms
+2013-12-15 21:59:01.223 CS Cookbook[63237:a07] [CDVTimer][TotalPluginStartup] 6.633997ms
+2013-12-15 21:59:01.254 CS Cookbook[63237:a07] Resetting plugins due to page load.
+2013-12-15 21:59:01.587 CS Cookbook[63237:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/72D6FDF0-18BA-4E96-96D9-825DFCAF738D/CS%20Cookbook.app/www/index.html
+Couldn't connect to migrator port (1102).
+2013-12-15 22:23:16.990 CS Cookbook[63680:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 22:23:16.999 CS Cookbook[63680:a07] Unlimited access to network resources
+2013-12-15 22:23:17.020 CS Cookbook[63680:a07] [CDVTimer][splashscreen] 5.824983ms
+2013-12-15 22:23:17.021 CS Cookbook[63680:a07] [CDVTimer][TotalPluginStartup] 6.380022ms
+2013-12-15 22:23:17.052 CS Cookbook[63680:a07] Resetting plugins due to page load.
+2013-12-15 22:23:17.382 CS Cookbook[63680:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/72D6FDF0-18BA-4E96-96D9-825DFCAF738D/CS%20Cookbook.app/www/index.html
+2013-12-15 22:45:07.619 CS Cookbook[64102:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 22:45:07.652 CS Cookbook[64102:a07] Unlimited access to network resources
+2013-12-15 22:45:07.673 CS Cookbook[64102:a07] [CDVTimer][splashscreen] 6.321013ms
+2013-12-15 22:45:07.674 CS Cookbook[64102:a07] [CDVTimer][TotalPluginStartup] 6.862998ms
+2013-12-15 22:45:07.698 CS Cookbook[64102:a07] Resetting plugins due to page load.
+2013-12-15 22:45:08.011 CS Cookbook[64102:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/72D6FDF0-18BA-4E96-96D9-825DFCAF738D/CS%20Cookbook.app/www/index.html
+2013-12-15 22:48:53.507 CS Cookbook[64462:a07] Multi-tasking -> Device: YES, App: YES
+2013-12-15 22:48:53.516 CS Cookbook[64462:a07] Unlimited access to network resources
+2013-12-15 22:48:53.538 CS Cookbook[64462:a07] [CDVTimer][splashscreen] 6.090999ms
+2013-12-15 22:48:53.539 CS Cookbook[64462:a07] [CDVTimer][TotalPluginStartup] 6.645977ms
+2013-12-15 22:48:53.578 CS Cookbook[64462:a07] Resetting plugins due to page load.
+2013-12-15 22:48:53.936 CS Cookbook[64462:a07] Finished load of: file:///Users/mike/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/72D6FDF0-18BA-4E96-96D9-825DFCAF738D/CS%20Cookbook.app/www/index.html
+2013-12-15 23:15:13.995 CS Cookbook[64462:a07] THREAD WARNING: ['Camera'] took '146.479980' ms. Plugin should use a background thread.
+2013-12-15 23:15:18.176 CS Cookbook[64462:a07] Camera.getPicture: source type 1 not available.
+2013-12-15 23:15:19.792 CS Cookbook[64462:a07] THREAD WARNING: ['Camera'] took '1615.792969' ms. Plugin should use a background thread.

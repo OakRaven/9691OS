@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>AngularJS Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+  }
+  .numeric {
+    text-align: right;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>AngularJS demo...</h1>
+    <p>
+      This page demonstrates using AngularJS service() provider.
+    </p>
+    <hr>
+    <div ng-controller="serviceFactoryCtrl" ng-cloak>
+      <h2>{{title}}</h2>
+      <h3>Service</h3>
+      <ul>
+        <li>Area of rectangle: {{areaOfRectangle | number:2}}</li>
+        <li>Area of triangle: {{areaOfTriangle | number:2}}</li>
+        <li>Area of circle: {{areaOfCircle | number:2}}</li>
+      </ul>
+      <h3>Factory</h3>
+      <ul>
+        <li>To upper case: {{toUpper}}</li>
+        <li>To lower case: {{toLower}}</li>
+        <li>Length: {{length}}</li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script src="js/vendor/angular.min.js"></script>
+<script src="js/vendor/coffee-script.min.js"></script>
+<script type="text/coffeescript" src="coffee/service-factory.coffee"></script>
+<script type="text/coffeescript">
+angular.bootstrap document, ['demoApp']
+</script>
+</html>

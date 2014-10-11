@@ -1,0 +1,11 @@
+{
+  "name": "working_with_sqlite",
+  "version": "1.0.0",
+  "description": "Demonstrating the use of CoffeeScript with SQLite",
+  "dependencies": {
+    "sqlite3": "^3.0.2"
+  },
+  "devDependencies": {},
+  "author": "M. W. Hatfield <mwhatfield@outlook.com>",
+  "license": "ISC"
+}

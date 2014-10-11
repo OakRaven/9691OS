@@ -1,0 +1,15 @@
+{
+  "name": "zombie_sample",
+  "version": "1.0.0",
+  "description": "Demonstration of using CoffeeScript with Zombie.",
+  "main": "index.js",
+  "dependencies": {
+    "zombie": "^2.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "M. W. Hatfield <mwhatfield@outlook.com>",
+  "license": "ISC"
+}

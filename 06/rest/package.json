@@ -1,0 +1,11 @@
+{
+  "name": "rest",
+  "version": "1.0.0",
+  "description": "Demonstrating calling web service end points using CoffeeScript",
+  "dependencies": {
+    "node-rest-client": "^1.0.3"
+  },
+  "devDependencies": {},
+  "author": "M. W. Hatfield <mwhatfield@outlook.com>",
+  "license": "ISC"
+}

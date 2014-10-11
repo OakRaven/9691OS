@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <title>Backbone Model Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Models...</h1>
+    <p>
+      This example demonstrates defining models and collections in
+      Backbone.js
+    </p>
+
+    <div id="album-container">
+    </div>
+
+    <script type="text/x-template" id="album-template">
+      <h2><%= title %></h2>
+      <div class="well">
+      <% _.each(images.models, function(img){ %>
+        <a href="<%= imageRootPath + img.get('filename') %>"
+          data-lightbox="<%= title %>"
+          title="<%= img.get('description') %>">
+          <img
+            src="<%= imageRootPath + "tn_" + img.get('filename') %>"
+            alt="<%= img.get('description') %>"
+            class="img-thumbnail">
+        </a>
+      <% }); %>
+      </div>
+    </script>
+  </div>
+</body>
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/underscore-min.js"></script>
+<script src="js/vendor/backbone-min.js"></script>
+<script src="js/vendor/lightbox-2.6.min.js"></script>
+<script src="js/album.js"></script>
+<script src="js/album-data.js"></script>
+
+</html>

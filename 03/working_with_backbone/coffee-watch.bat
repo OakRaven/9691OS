@@ -1,0 +1,1 @@
+coffee -c -w -o src/js src/coffee/**.coffee

@@ -1,0 +1,11 @@
+{
+  "name": "sms",
+  "version": "1.0.0",
+  "description": "Demonstrating sending SMS and MMS messages with CoffeeScript using Twilio",
+  "dependencies": {
+    "twilio": "^1.7.0"
+  },
+  "devDependencies": {},
+  "author": "M. W. Hatfield <mwhatfield@outlook.com>",
+  "license": "ISC"
+}

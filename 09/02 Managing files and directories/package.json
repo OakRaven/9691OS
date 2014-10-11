@@ -1,0 +1,14 @@
+{
+  "name": "managing-files-and-directories",
+  "version": "0.0.1",
+  "author": "Mike Hatfiekd",
+  "description": "Samples for CoffeeScript Application Development Cookbook",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "archiver": "^0.11.0",
+    "fs-extra": "^0.11.1"
+  }
+}

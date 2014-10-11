@@ -1,0 +1,54 @@
+app = window.app = window.app || {}
+applicaiton = null
+
+app.emToPx = (input) ->
+  emSize = parseFloat ($ body).css('font-size')
+  return emSize * input
+
+document.addEventListener 'deviceready', ->
+  application = new kendo.mobile.Application document.body
+
+app.pieChart =
+  createPieChart: ->
+    app.pieChart.drawPieChart()
+    app.pieChart.bindResizeEvent()
+
+  drawPieChart: ->
+    pieChart.destroy() if pieChart isnt null
+
+    $pieChart = ($ '#pie-chart').emtpy()
+
+    pieChart = $pieChart.kendoChart(
+      renderAs: 'svg'
+      title:
+        position: 'top'
+        text: 'Internet Population Growth, 2007 - 2012'
+      legend:
+        position: 'bottom'
+      chartArea:
+        background: ''
+        width: ($ window).width()
+        margin: app.emToPx 1
+      series: [
+        type: 'pie'
+        startAngle: 150
+        data: [
+          { category: "Asia", value: 53.8 }
+          { category: "Europe", value: 16.1 }
+          { category: "Latin America", value: 11.3 }
+          { category: "Africa", value: 9.6 }
+          { category: "Middle East", value: 5.2 }
+          { category: "North America", value: 3.6 }
+        ]
+      ]
+      tooltip:
+        visible: true
+        format: "{0}%"
+    ).data 'kendoChart'
+
+
+  bindResizeEvent: ->
+    ($ window).on 'resize.pieChart', ($.proxy app.pieChart.drawPieChart, app.pieChart)
+
+  unbindResizeEvent: ->
+    ($ window).off 'resize.pieChart'

@@ -1,0 +1,17 @@
+{
+  "name": "simple-api",
+  "description": "RESTful API",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.9.0",
+    "coffee-script": "1.6.x",
+    "express": "^3.17.6",
+    "underscore": "^1.7.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Hatfield <mwhatfield@outlook.com>",
+  "license": "ISC"
+}

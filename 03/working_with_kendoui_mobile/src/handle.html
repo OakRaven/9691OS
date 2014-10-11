@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="css/kendo.mobile.all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/kendo/kendo.all.min.js"></script>
+  <script src="js/vendor/coffee-script.min.js"></script>
+</head>
+
+<body>
+  <div data-id="standard-layout" data-role="layout">
+    <header data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span>
+      </div>
+    </header>
+
+    <p>This content will be ignored</p>
+
+    <div data-role="footer">
+      <div data-role="tabstrip">
+        <a href="#first" data-icon="home">First</a>
+        <a href="#second" data-icon="contacts">Second</a>
+        <a href="#third" data-icon="info">Third</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="first" data-role="view" data-title="First View"
+    data-layout="standard-layout">
+    <h1>First view content</h1>
+    <div id="output"></div>
+  </div>
+
+  <div id="second" data-role="view" data-title="Second View"
+    data-layout="standard-layout">
+    <h1>Second view content</h1>
+  </div>
+
+  <div id="third" data-role="view" data-title="Third View"
+    data-layout="standard-layout">
+    <h1>Third view content</h1>
+  </div>
+
+  <script type="text/coffeescript" src="coffee/app-handle.coffee"></script>
+  <script type="text/coffeescript">
+    app.init document.body
+  </script>
+</body>
+
+</html>

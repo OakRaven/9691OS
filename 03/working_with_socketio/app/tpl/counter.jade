@@ -1,0 +1,22 @@
+!!!
+html
+  head
+    title= "Socket.io Example"
+    link(rel="stylesheet", href="css/bootstrap.min.css")
+  body
+    .container
+      h1= "Socket.io Example"
+      p
+        | This page demonstrates the use of Socket.io
+      hr
+      .well
+        #output= "Waiting..."
+
+      .btn-toolbar
+        button#add-1000.btn.btn-primary= "Add 1000"
+        button#add-500.btn.btn-primary= "Add 500"
+
+  script(src="js/vendor/jquery.min.js")
+  script(src="js/vendor/coffee-script.min.js")
+  script(src="/socket.io/socket.io.js")
+  script(src="coffee/client.coffee", type="text/coffeescript")

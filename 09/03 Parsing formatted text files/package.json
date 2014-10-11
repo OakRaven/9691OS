@@ -1,0 +1,15 @@
+{
+  "name": "parsing-text-files",
+  "version": "0.0.1",
+  "author": "Mike Hatfiekd",
+  "description": "Samples for CoffeeScript Application Development Cookbook",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "csv": "^0.4.0",
+    "moment": "^2.8.3"
+  }
+}

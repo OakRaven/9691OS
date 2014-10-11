@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/kendo.mobile.all.min.css">
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/kendo/kendo.all.min.js"></script>
+</head>
+
+<body>
+  <!-- Dashboard YTD Sales -->
+  <div data-role="view" id="tabstrip-dashboard"
+    data-title="Dashboard" data-layout="mobile-tabstrip"
+    data-stretch="true" data-show="initChart">
+    <header data-role="header">
+      <div data-role="navbar">
+        Dashboard
+        <a data-role="button" class="nav-button"
+          data-rel="actionsheet" href="#chart-types"
+          data-align="right">Chart</a>
+      </div>
+    </header>
+
+    <div id="salesYtd"></div>
+
+    <ul data-role="actionsheet" id="chart-types">
+      <li><a data-action="showBar">Bar Graph</a></li>
+      <li><a data-action="showLine">Line Graph</a></li>
+      <li><a data-action="showArea">Area Graph</a></li>
+    </ul>
+  </div>
+
+  <!-- Employees -->
+  <div data-role="view" id="tabstrip-employees"
+    data-title="Employee List" data-layout="mobile-tabstrip"
+    data-init="listViewInit" data-style="inset">
+    <header data-role="header">
+      <div data-role="navbar">
+        <a id="add" class="nav-button" data-align="left"
+          data-role="button">Add</a>
+        <span data-role="view-title"></span>
+      </div>
+    </header>
+
+
+    <ul id="listview"></ul>
+
+    <script id="employeeItemTemplate" type="text/x-template">
+      <a> #= firstName + ' ' + lastName # </a>
+      <a href="\\#" data-role="button" class="delete">Delete</a>
+    </script>
+  </div>
+
+  <div data-role="view" id="detailview" data-title="Employee Edit"
+    data-layout="mobile-tabstrip" data-init="detailInit" data-show="detailShow">
+    <header data-role="header">
+      <div data-role="navbar">
+        <a class="nav-button" data-align="left" data-role="backbutton" id="cancel">Cancel</a>
+        <span data-role="view-title">Details</span>
+        <a class="nav-button" data-align="right" data-role="button" id="done">Done</a>
+      </div>
+    </header>
+
+    <form action="">
+      <ul data-role="listview" data-style="inset" onlick="">
+        <li>
+          <label>First name
+            <input type="text" data-bind="value: firstName" />
+          </label>
+        </li>
+        <li>
+          <label>Last name
+            <input type="text" data-bind="value: lastName" />
+          </label>
+        </li>
+        <li>
+          <label>Sales YTD
+            <input type="number" data-bind="value: salesYtd">
+          </label>
+        </li>
+      </ul>
+    </form>
+  </div>
+
+  <!-- About -->
+  <!-- Display informaiton about the application -->
+  <div data-role="view" data-title="About"
+    data-layout="mobile-tabstrip" id="tabstrip-about">
+  </div>
+
+  <div data-role="layout" data-id="mobile-tabstrip">
+    <header data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span>
+      </div>
+    </header>
+
+    <p>TabStrip</p>
+
+    <div data-role="footer">
+      <div data-role="tabstrip">
+        <a href="#tabstrip-dashboard" data-icon="toprated">Dashboard</a>
+        <a href="#tabstrip-employees" data-icon="contacts">Employees</a>
+        <a href="#tabstrip-about" data-icon="info">About</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  var
+    chartType = 'column',
+    dataSource = new kendo.data.DataSource({
+      data: [{
+          "id": 1,
+          "firstName": "Tracy",
+          "lastName": "Ouellette",
+          "salesYtd": 22246
+        }, {
+          "id": 2,
+          "firstName": "Chris",
+          "lastName": "Daniel",
+          "salesYtd": 3876
+        }, {
+          "id": 3,
+          "firstName": "Jason",
+          "lastName": "Alexander",
+          "salesYtd": 4095
+        }, {
+          "id": 4,
+          "firstName": "Jennifer",
+          "lastName": "Hannah",
+          "salesYtd": 8070
+        }, {
+          "id": 5,
+          "firstName": "Maxx",
+          "lastName": "Slayde",
+          "salesYtd": 2032
+        }],
+      sort: {
+        field: 'salesYtd',
+        dir: 'desc'
+      }
+    });
+
+  function emToPx(input) {
+    var emSize = parseFloat($('body').css('font-size'));
+    return emSize * input;
+  }
+
+  function buildChart(type) {
+    chartType = type || 'column';
+
+    $('#salesYtd').kendoChart({
+      dataSource: dataSource,
+      title: {
+        text: "YTD Sales"
+      },
+      legend: {
+        position: "bottom"
+      },
+      chartArea: {
+        margin: emToPx(1)
+      },
+      seriesDefaults: {
+        labels: {
+          visible: true,
+          format: "{0:c}"
+        }
+      },
+      series: [{
+        type: chartType,
+        field: "salesYtd"
+      }],
+      categoryAxis: {
+        field: "firstName"
+      }
+    });
+    $("#salesYtd").css("-ms-touch-action", "auto");
+  }
+
+  function showBar() {
+    buildChart('column');
+  }
+
+  function showLine() {
+    buildChart('line');
+  }
+
+  function showArea() {
+    buildChart('area');
+  }
+
+  function navigateToEmployee(uid) {
+    kendo.mobile.application.navigate('#detailview?uid=' + uid);
+  }
+
+  function initChart(e) {
+    buildChart(chartType);
+  }
+
+  function listViewInit(e) {
+    var view = e.view;
+    view.element.find('#listview').kendoMobileListView({
+        dataSource: dataSource,
+        template: $('#employeeItemTemplate').html()
+    })
+    .kendoTouch({
+      filter: '>li',
+      enableSwipe: true,
+      touchstart: touchstart,
+      tap: navigate,
+      swipe: swipe
+    });
+
+    view.element.find('#add').bind('click', function(e){
+      e.preventDefault();
+      dataSource.add({firstName: '', lastName: '', salesYtd: 0.00});
+      var data = dataSource.data();
+      var lastItem = data[data.length - 1];
+      navigateToEmployee(lastItem.uid);
+    });
+  }
+
+  function navigate(e) {
+    var itemUid = $(e.touch.currentTarget).data('uid');
+    navigateToEmployee(itemUid);
+  }
+
+  function swipe(e) {
+    var button = kendo.fx($(e.touch.currentTarget).find('[data-role=button]'));
+    button.expand().duration(200).play();
+  }
+
+  function touchstart(e) {
+    var model,
+      target = $(e.touch.initialTouch),
+      listview = $('#listview').data('kendoMobileListView'),
+      button = $(e.touch.target).find('[data-role=button]:visible');
+
+    if (target.closest('[data-role=button]')[0]) {
+      model = dataSource.getByUid($(e.touch.target).attr('data-uid'));
+      dataSource.remove(model);
+
+      this.events.cancel();
+      e.event.stopPropagation();
+    } else if (button[0]) {
+      button.hide();
+      this.events.cancel();
+    } else {
+      listview.items().find('[data-role=button]:visible').hide();
+    }
+  }
+
+  function detailShow(e) {
+    var model = dataSource.getByUid(e.view.params.uid);
+    kendo.bind(e.view.element, model, kendo.mobile.ui);
+  }
+
+  function detailInit(e) {
+    var view = e.view;
+
+    view.element.find('#done').data('kendoMobileButton').bind('click', function(e){
+      e.preventDefault();
+      kendo.mobile.application.navigate('#tabstrip-employees');
+    });
+
+    view.element.find('#cancel').data('kendoMobileBackButton').bind('click', function(e){
+      e.preventDefault();
+      dataSource.cancelChanges();
+      kendo.mobile.application.navigate('#tabstrip-employees');
+    });
+
+  }
+  </script>
+  <script>
+  var app = new kendo.mobile.Application(document.body);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Lightbox Demo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lightbox...</h1>
+      <p>
+        Below is a sample Lightbox gallery.
+      </p>
+      <div id="gallery" class="well">
+      </div>
+
+      <script type="text/x-template" id="album-template">
+        <h2><%= album.title %></h2>
+        <div>
+        <% _.each(album.images, function(img){ %>
+          <a href="<%= album.imageRootPath + img.filename %>"
+            data-lightbox="<%= album.title %>" title="<%= img.description %>">
+            <img src="<%= album.imageRootPath + "tn_" + img.filename %>"
+              alt="<%= img.description %>" class="img-thumbnail">
+          </a>
+        <% }); %>
+        </div>
+      </script>
+    </div>
+  </body>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/lightbox-2.6.min.js"></script>
+  <script src="js/vendor/underscore-min.js"></script>
+  <script src="js/lightbox_demo.js"></script>
+</html>

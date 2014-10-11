@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="albumApp">
+  <head>
+    <title>AngularJS Demo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>AngularJS demo...</h1>
+      <p>
+        This page demonstrates using AngularJS.
+      </p>
+      <div ng-controller="albumController">
+        <div class="well">
+          <h2>{{album.title}}</h2>
+          <div>
+            <a href="{{album.imageRootPath + img.filename}}"
+              ng-repeat="img in album.images"
+              data-lightbox="{{album.title}}"
+              title="{{img.description}}">
+              <img
+                src="{{album.imageRootPath + 'tn_' + img.filename}}"
+                title="{{img.description}}"
+                class="img-thumbnail" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/vendor/angular.min.js"></script>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/lightbox-2.6.min.js"></script>
+  <script src="js/app-1.js"></script>
+</html>

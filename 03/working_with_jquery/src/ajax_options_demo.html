@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ajax Demo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ajax...</h1>
+      <p>This page demonstrates the sample code for performing
+        Ajax requests with jQuery.</p>
+      <p>
+        Choose your ajax method:
+      </p>
+      <div class="btn-group">
+        <button id="first-button" type="button"
+          class="btn btn-default">$.ajax()</button>
+        <button id="second-button" type="button"
+          class="btn btn-default">$.ajax() with deferred</button>
+        <button id="third-button" type="button"
+          class="btn btn-default">$.get()</button>
+        <button id="fourth-button" type="button"
+          class="btn btn-default">$.getJSON()</button>
+      </div>
+      <div id="output" class="well">
+      </div>
+    </div>
+    <script type="text/x-template" id="departments-template">
+      <h2>Loaded by <%= method   %></h2>
+      <ul>
+      <% _.each(departments, function(dept) { %>
+        <li><%= dept %></li>
+      <% }) %>
+      </ul>
+    </script>
+    </script>
+  </body>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/underscore-min.js"></script>
+  <script src="js/ajax_options.js"></script>
+</html>

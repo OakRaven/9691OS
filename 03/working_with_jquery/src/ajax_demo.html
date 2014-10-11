@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Ajax Demo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ajax...</h1>
+      <p>This page demonstrates the sample code for performing
+        Ajax requests with jQuery.</p>
+
+      <ul id="options-nav" class="nav nav-tabs">
+        <li class="active">
+          <a href="#" data-option="text" data-type="text"
+            data-toggle="tab">
+            Homer's Odessy
+          </a>
+        </li>
+        <li>
+          <a href="#" data-option="departments" data-type="json"
+            data-toggle="tab">
+            Departments
+          </a>
+        </li>
+        <li>
+          <a href="#" data-option="employees" data-type="json"
+            data-toggle="tab">
+            Employees
+          </a>
+        </li>
+      </ul>
+      <div id="information-panel" class="well">
+        <p>
+          He counted his goodly coppers and cauldrons, his gold and all his
+          clothes, but there was nothing missing; still he kept grieving
+          about not being in his own country, and wandered up and down by
+          the shore of the sounding sea bewailing his hard fate. Then
+          Minerva came up to him disguised as a young shepherd of delicate
+          and princely mien, with a good cloak folded double about her
+          shoulders; she had sandals on her comely feet and held a javelin
+          in her hand. Ulysses was glad when he saw her, and went straight
+          up to her.
+        </p>
+      </div>
+    </div>
+    <script type="text/x-template" id="text-template">
+      <p>
+        {{value}}
+      </p>
+    </script>
+    <script type="text/x-template" id="departments-template">
+      <ul class="list-group">
+      {{#each value}}
+        <li class="list-group-item">{{this}}</li>
+      {{/each}}
+      </ul>
+    </script>
+    <script type="text/x-template" id="employees-template">
+      <table class="table table-bordered table-condensed table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>YTD Sales</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each value}}
+          <tr>
+            <td>{{id}}</td>
+            <td>{{lastName}}</td>
+            <td>{{firstName}}</td>
+            <td><span class="pull-right">{{Currency salesYtd}}</span></td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </script>
+  </body>
+  <script src="js/vendor/jquery.min.js"></script>
+  <script src="js/vendor/handlebars.min.js"></script>
+  <script src="js/vendor/accounting.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/ajax.js"></script>
+</html>

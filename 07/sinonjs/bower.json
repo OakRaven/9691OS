@@ -1,0 +1,22 @@
+{
+  "name": "sinonjs",
+  "version": "1.0.0",
+  "description": "Demonstration of using CoffeeScript with Sinon.JS.",
+  "authors": [
+    "M. W. Hatfield <mwhatfield@outlook.com>"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jasmine": "2.0.1",
+    "sinon": "~1.10.3",
+    "coffee-script": "~1.8.0"
+  }
+}

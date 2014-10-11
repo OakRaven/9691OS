@@ -1,0 +1,13 @@
+{
+  "name": "working_with_base64_encoding",
+  "version": "1.0.0",
+  "description": "Demonstrating using CoffeeScript for base64 encoding and decoding",
+  "dependencies": {
+    "atob": "^1.1.2",
+    "btoa": "^1.1.2",
+    "request": "^2.45.0"
+  },
+  "devDependencies": {},
+  "author": "M. W. Hatfield <mwhatfield@outlook.com>",
+  "license": "MIT"
+}

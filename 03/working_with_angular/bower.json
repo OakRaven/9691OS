@@ -1,0 +1,21 @@
+{
+  "name": "working_with_angular",
+  "version": "1.0.0",
+  "description": "Demonstration of using CoffeeScript with Angular",
+  "authors": [
+    "M. W. Hatfield <mwhatfield@outlook.com>"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.2.4",
+    "angular-sanitize": "~1.2.4"
+  }
+}

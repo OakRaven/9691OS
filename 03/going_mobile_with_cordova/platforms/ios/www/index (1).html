@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" href="css/kendo.mobile.all.min.css">
+    <title>CoffeeScript - Cordova</title>
+  </head>
+  <body>
+    <div data-role="view" id="app-camera" data-title="Camera"
+      data-layout="layout">
+      <h3>Camera</h3>
+      <p>
+        <a data-role="button"
+          data-click="app.demos.camera.onTakePhoto">
+          Take Photo</a>
+        <a data-role="button"
+          data-click="app.demos.camera.onSelectPhoto">
+          Select Photo</a>
+      </p>
+      <ul data-role="listview" data-style="inset"></ul>
+      <div id="photo-view" data-role="scroller">
+      	<div data-role="page">
+      		<img id="photo" src="" />
+      	</div>
+      </div>
+    </div>
+
+    <div data-role="view" id="app-location" data-title="Location"
+      data-layout="layout">
+      <h3>Location</h3>
+      <p>
+        <a data-role="button"
+          data-click="app.demos.location.onFetchLocation">
+          Fetch Location</a>
+      </p>
+      <p id="location-status" style="display: none;">
+        <i>Fetching position...</i>
+      </p>
+      <p id="location-error" style="display: none;"></p>
+      <ul id="location-info" data-role="listview"
+        data-style="inset" style="display: none;">
+      </ul>
+    </div>
+
+    <div data-role="view" id="app-contact" data-title="Contacts"
+      data-layout="layout">
+      <h3>Contacts</h3>
+      <p>
+        <a data-role="button"
+          data-click="app.demos.contacts.onAddContact">
+          Add Contact</a>
+
+        <a data-role="button"
+          data-click="app.demos.contacts.onFetchContacts">
+          Fetch Contacts</a>
+      </p>
+      <p id="contact-status" style="display: none;">
+        <i>Fetching contacts...</i>
+      </p>
+      <p id="contact-error" style="display: none;"></p>
+      <ul id="contact-info" data-role="listview"
+        data-style="inset" style="display: none;">
+      </ul>
+    </div>
+
+    <div data-role="view" id="app-device" data-title="Contacts"
+      data-layout="layout">
+      <h3>Device Information</h3>
+      <p>
+        <a data-role="button"
+          data-click="app.demos.device.onFetchInfo">
+          Fetch Device Info</a>
+      </p>
+      <ul id="device-info" data-role="listview"
+        data-style="inset" style="display: none;">
+      </ul>
+    </div>
+
+    <div data-role="layout" data-id="layout">
+      <header data-role="header">
+        <div data-role="navbar">
+          <span data-role="view-title"></span>
+        </div>
+      </header>
+
+      <p>TabStrip</p>
+
+      <div data-role="footer">
+      	<div data-role="tabstrip">
+      		<a href="#app-camera" data-icon="camera">Camera</a>
+      		<a href="#app-location" data-icon="globe">Location</a>
+      		<a href="#app-contact" data-icon="contacts">Contacts</a>
+          <a href="#app-device" data-icon="settings">Device</a>
+      	</div>
+      </div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/kendo/kendo.all.min.js"></script>
+    <script src="js/vendor/coffee-script.min.js"></script>
+
+    <script src="coffee/app.coffee" type="text/coffeescript"></script>
+    <script src="coffee/camera.coffee" type="text/coffeescript"></script>
+    <script src="coffee/location.coffee" type="text/coffeescript"></script>
+    <script src="coffee/contact.coffee" type="text/coffeescript"></script>
+    <script src="coffee/device.coffee" type="text/coffeescript"></script>
+
+    <script type="text/coffeescript">
+      app.init()
+    </script>
+  </body>
+</html>

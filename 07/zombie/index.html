@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Calculator App</h1>
+
+  <div>
+    <label for="firstValue">First value:</label><br />
+    <input type="text" id="firstValue">
+  </div>
+
+  <div>
+    <label for="secondValue">Second value:</label><br />
+    <input type="text" id="secondValue">
+  </div>
+
+  <button id="calculateButton">Calculate</button>
+
+  <div id="answer"></div>
+
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/coffee-script.js"></script>
+  <script type="text/coffeescript"
+    src="src/Calculator.coffee"></script>
+  <script type="text/coffeescript" src="src/App.coffee"></script>
+  <script type="text/coffeescript">
+  new App()
+  </script>
+</body>
+</html>

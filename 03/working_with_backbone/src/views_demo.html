@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <title>Backbone Model Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Views...</h1>
+    <p>
+      This example demonstrates defining and rendering views in
+      Backbone.js
+    </p>
+
+    <button id="add-button" class="btn btn-primary">
+      Add Image
+    </button>
+
+    <div id="album-container">
+    </div>
+
+    <script type="text/x-template" id="album-template">
+      <h2><%= title %></h2>
+      <div class="well">
+      </div>
+    </script>
+
+    <script type="text/x-template" id="image-template">
+      <img
+        src="<%= imageRootPath + "tn_" + filename %>"
+        alt="<%= description %>"
+        class="img-thumbnail">
+    </script>
+  </div>
+</body>
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/underscore-min.js"></script>
+<script src="js/vendor/backbone-min.js"></script>
+<script src="js/vendor/lightbox-2.6.min.js"></script>
+<script src="js/album.js"></script>
+<script src="js/views/image-view.js"></script>
+<script src="js/views/album-view.js"></script>
+<script src="js/album-views.js"></script>
+
+</html>

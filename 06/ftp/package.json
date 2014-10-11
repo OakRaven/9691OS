@@ -1,0 +1,12 @@
+{
+  "name": "ftp",
+  "version": "1.0.0",
+  "description": "Demonstrating transferring files via FTP using CoffeeScript",
+  "dependencies": {
+    "ftp": "0.3.6",
+    "q": "1.0.1"
+  },
+  "devDependencies": {},
+  "author": "M. W. Hatfield <mwhatfield@outlook.com>",
+  "license": "ISC"
+}

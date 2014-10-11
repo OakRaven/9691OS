@@ -1,0 +1,21 @@
+{
+  "name": "going_mobile_with_cordova",
+  "version": "1.0.0",
+  "description": "Demonstration of using CoffeeScript with Apache Cordova",
+  "authors": [
+    "M. W. Hatfield <mwhatfield@outlook.com>"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "coffee-script": "~1.8.0",
+    "jquery": "1.9.1"
+  }
+}

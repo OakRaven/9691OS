@@ -1,0 +1,11 @@
+{
+  "name": "s3",
+  "version": "1.0.0",
+  "description": "Demonstrating sending and receiving files to Amazon's S3 service using CoffeeScript",
+  "dependencies": {
+    "aws-sdk": "^2.0.19"
+  },
+  "devDependencies": {},
+  "author": "M. W. Hatfield <mwhatfield@outlook.com>",
+  "license": "ISC"
+}

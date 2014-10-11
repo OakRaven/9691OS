@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Backbone Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Backbone demo...</h1>
+    <p>
+      This page demonstrates the use of Backbone collections.
+    </p>
+    <hr>
+    <p>
+      Open your brower's developer tools to continue...
+    </p>
+  </div>
+</body>
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/underscore-min.js"></script>
+<script src="js/vendor/backbone-min.js"></script>
+<script src="js/vendor/coffee-script.min.js"></script>
+<script type="text/coffeescript" src="coffee/app.coffee">
+</script>
+<script type="text/coffeescript" src="coffee/model.coffee">
+</script>
+<script type="text/coffeescript" src="coffee/collection.coffee">
+</script>
+<script type="text/coffeescript">
+  # initialize collection
+  empList = new app.collections.EmployeeList [
+    { id: 1, firstName: "Tracy" }
+    { id: 2, firstName: "Chris", }
+    { id: 3, firstName: "Jason", }
+    { id: 4, firstName: "Jennifer" }
+  ]
+  console.log "Employee count: ", empList.length
+
+  # add to collection
+  empList.add { id: 5, "firstName": "Maxx" }
+  console.log "Employee count: ", empList.length
+
+  # first item
+  firstEmp = empList.at 0
+  console.log "First employee: ", firstEmp.toJSON()
+
+  # remove from collection
+  empList.remove { id: 4, firstName: "Jennifer" }
+  console.log "Employee count: ", empList.length
+
+  # find item from collection
+  jason = empList.findWhere { firstName: 'Jason' }
+  console.log "Jason: ", jason.toJSON()
+
+  # plucking
+  firstNames = empList.pluck 'firstName'
+  console.log "First names: ", (firstNames.join ', ')
+
+</script>
+</html>

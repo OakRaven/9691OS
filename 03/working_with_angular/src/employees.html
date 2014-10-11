@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>AngularJS Demo</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+  }
+  .numeric {
+    text-align: right;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>AngularJS demo...</h1>
+    <p>
+      This page demonstrates using AngularJS.
+    </p>
+    <hr>
+    <div ng-controller="employeeCtrl" ng-cloak>
+      <h2>{{title}}</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table table-condensed table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th class="numeric">Sales YTD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="emp in employees">
+                <td>{{emp.fullName()}}</td>
+                <td class="numeric">{{emp.salesYtd | currency}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="js/vendor/angular.min.js"></script>
+<script src="js/vendor/coffee-script.min.js"></script>
+<script type="text/coffeescript" src="coffee/app.coffee"></script>
+<script type="text/coffeescript" src="coffee/models.coffee"></script>
+<script type="text/coffeescript" src="coffee/controllers.coffee"></script>
+<script type="text/coffeescript">
+  angular.bootstrap document, ['demoApp']
+</script>
+
+</html>

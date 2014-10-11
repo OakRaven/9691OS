@@ -1,0 +1,21 @@
+{
+  "name": "creating_pdfs",
+  "version": "1.0.0",
+  "description": "Demonstrating ways to use CoffeeScript to create PDF's",
+  "authors": [
+    "M. W. Hatfield <mwhatfield@outlook.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0"
+  }
+}
