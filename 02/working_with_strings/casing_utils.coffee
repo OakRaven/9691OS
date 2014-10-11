@@ -1,23 +1,26 @@
+UNCAPITALIZED_WORDS_FOR_TITLECASE = \
+  ['a','an','and','but','for','nor','or','the']
+
 capitalizeWord = (word) ->
-  (word.substr 0, 1).toUpperCase() + (word.substr 1).toLowerCase()
+  word[0].toUpperCase() + word[1..].toLowerCase()
+
+upperSplit = (item) ->
+  words = []
+  word = ''
+
+  for char in item.split ''
+    if /[A-Z]/.test char
+      words.push word if word.length
+      word = char
+    else
+      word += char
+
+  words.push word if word.length
+
+  return words
 
 splitStringIntoTokens = (text) ->
   results = []
-
-  upperSplit = (item) ->
-    words = []
-    word = ''
-
-    for char in (item.split '')
-      if (/[A-Z]/.test char)
-        words.push word if word.length > 0
-        word = char
-      else
-        word += char
-
-    words.push word if word.length > 0
-
-    return words
 
   for token in text.split /[ _]+/
     token = token.trim()
@@ -27,13 +30,12 @@ splitStringIntoTokens = (text) ->
 
   results
 
-toTitleCase = (text) ->
-  wordsToIgnore = '|a|an|and|but|for|nor|or|the |'
+toTitleCase = (text, wordsToIgnore = UNCAPITALIZED_WORDS_FOR_TITLECASE) ->
   words = splitStringIntoTokens text
   words[0] = capitalizeWord words[0]
-  for index in [1...words.length]
-    if (wordsToIgnore.indexOf "|#{words[index]}|") < 0
-      words[index] = capitalizeWord words[index]
+  for word, index in words[1..]
+    unless word in wordsToIgnore
+      words[index+1] = capitalizeWord word
 
   words.join ' '
 
@@ -43,16 +45,14 @@ toSentenceCase = (text) ->
   words.join ' '
 
 toSnakeCase = (text) ->
-  words = splitStringIntoTokens text
-  words.join '_'
+  splitStringIntoTokens(text).join '_'
 
 toPascalCase = (text) ->
-  words = (capitalizeWord word for word in (splitStringIntoTokens text))
-  words.join ''
+  (capitalizeWord word for word in splitStringIntoTokens(text)).join ''
 
 toCamelCase = (text) ->
   text = toPascalCase text
-  text.substr(0, 1).toLowerCase() + text.substr(1)
+  text[0].toLowerCase() + text[1..]
 
 module.exports =
   toSentenceCase: toSentenceCase
