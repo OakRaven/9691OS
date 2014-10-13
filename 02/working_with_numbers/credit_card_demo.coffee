@@ -9,10 +9,10 @@ visa2Sample = '4012788888881881'
 mc2Sample = '5555655555554444'
 
 console.log "#{visa1Sample} valid? ",
-  (ccv.isValidCreditCardNumber visa1Sample)
+  ccv.isValidCreditCardNumber visa1Sample
 console.log "#{mc1Sample} valid? ",
-  (ccv.isValidCreditCardNumber mc1Sample)
+  ccv.isValidCreditCardNumber mc1Sample
 console.log "#{visa2Sample} valid? ",
-  (ccv.isValidCreditCardNumber visa2Sample)
+  ccv.isValidCreditCardNumber visa2Sample
 console.log "#{mc2Sample} valid? ",
-  (ccv.isValidCreditCardNumber mc2Sample)
+  ccv.isValidCreditCardNumber mc2Sample

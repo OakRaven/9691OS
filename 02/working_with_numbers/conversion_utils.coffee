@@ -1,26 +1,26 @@
 PI = Math.PI
-DegreesInRadians = 180 / PI
-RadiansInGradian = 200 / PI
+DEGREES_IN_RADIAN = 180 / PI
+RADIANS_IN_GRADIAN = 200 / PI
 
 radiansToDegrees = (radians) ->
-  return radians * DegreesInRadians
+  radians * DEGREES_IN_RADIAN
 
 radiansToGradians = (radians) ->
-  return radians * RadiansInGradian
+  radians * RADIANS_IN_GRADIAN
 
 degreesToRadians = (degrees) ->
-  return degrees / DegreesInRadians
+  degrees / DEGREES_IN_RADIAN
 
 degreesToGradian = (degrees) ->
   radians = degreesToRadians degrees
-  return (radiansToGradians radians)
+  radiansToGradians radians
 
 gradiansToRadians = (gradians) ->
-  return gradians / RadiansInGradian
+  gradians / RADIANS_IN_GRADIAN
 
 gradiansToDegrees = (gradians) ->
   radians = gradiansToRadians gradians
-  return (radiansToDegrees radians)
+  radiansToDegrees radians
 
 module.exports.angles =
   degreesToRadians: degreesToRadians
