@@ -1,5 +1,5 @@
 # SPLIT() USING A REGULAR EXPRESSION
-whiteSpaceRegex = /[ \t\n]/
+whiteSpaceRegex = /\s/
 
 words = "A happy\tday\nis here"
 console.log "Value:", words

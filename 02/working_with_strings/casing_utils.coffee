@@ -1,4 +1,4 @@
-UNCAPITALIZED_WORDS_FOR_TITLECASE = \
+WORD_EXCEPTIONS_FOR_TITLECASE = \
   ['a','an','and','but','for','nor','or','the']
 
 capitalizeWord = (word) ->
@@ -30,7 +30,7 @@ splitStringIntoTokens = (text) ->
 
   results
 
-toTitleCase = (text, wordsToIgnore = UNCAPITALIZED_WORDS_FOR_TITLECASE) ->
+toTitleCase = (text, wordsToIgnore = WORD_EXCEPTIONS_FOR_TITLECASE) ->
   words = splitStringIntoTokens text
   words[0] = capitalizeWord words[0]
   for word, index in words[1..]
