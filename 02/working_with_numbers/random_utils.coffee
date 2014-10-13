@@ -1,13 +1,13 @@
 getRandomNumberInRange = (minimum, maximum) ->
-  length = (maximum - minimum) + 1
-  randomValue = Math.floor((Math.random() * length) + 1)
-  return  minimum - 1 + randomValue
+  length = maximum - minimum + 1
+  randomValue = Math.floor (Math.random() * length)
+  minimum + randomValue
 
 getRandomNumber = (maximum) ->
   getRandomNumberInRange 1, maximum
 
 getRandomElementFromCollection = (collection) ->
-  randomIndex = getRandomNumber 1, collection.length
+  randomIndex = getRandomNumberInRange 0, collection.length - 1
   collection[randomIndex]
 
 module.exports =
