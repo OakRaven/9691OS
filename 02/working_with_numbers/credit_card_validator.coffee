@@ -1,7 +1,6 @@
 reduceNumber = (number) ->
   value = 0
-  digits = []
-  digits.push(Number x) for x in number.toString().split('')
+  digits = (Number x for x in number.toString().split '')
   value += digit for digit in digits
 
   if value > 9
@@ -12,8 +11,7 @@ reduceNumber = (number) ->
 calculateCheckDigit = (creditCardNumber) ->
   value = 0
   index = 0
-  digits = []
-  digits.push(Number x) for x in creditCardNumber.split ''
+  digits = (Number x for x in creditCardNumber.split '')
   for digit in digits.reverse()
     if index % 2 is 1
       value += reduceNumber digit * 2
