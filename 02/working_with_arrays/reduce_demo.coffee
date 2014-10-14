@@ -2,8 +2,7 @@ data = require './sample_data'
 
 # Reduce numeric collection to the product of the values
 numbers = [1, 2, 3, 4, 5, 6]
-reduceToProduct = (total, numberToAdd) ->
-  total *= numberToAdd
+reduceToProduct = (total, value) -> total *= value
 
 productOfNumbers = numbers.reduce reduceToProduct, 1
 console.log productOfNumbers

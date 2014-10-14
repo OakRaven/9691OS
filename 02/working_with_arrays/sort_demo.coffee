@@ -11,11 +11,11 @@ console.log value for value in values.sort()
 
 # Sorting numbers - correct
 console.log '\nSorted Values (Correct)'
-console.log value for value in (values.sort (a,b) -> a - b)
+console.log "Sorted: #{values.sort (a,b) -> a - b}"
 
 # Sorting numbers in descending order
 console.log '\nSorted Values in Descending Order'
-console.log value for value in (values.sort (a,b) -> b - a)
+console.log "Sorted descending: #{values.sort (a,b) -> b - a}"
 
 # Sorting strings in descending order
 console.log '\nSorted Strings in Descending Order'
@@ -29,4 +29,5 @@ employeeSortBySalesYtd = (a, b) ->
   b.salesYtd - a.salesYtd
 
 console.log '\nEmployees Sorted by YTD Sales'
-displayEmployee emp for emp in data.employees.sort(employeeSortBySalesYtd)
+displayEmployee emp \
+  for emp in data.employees.sort(employeeSortBySalesYtd)

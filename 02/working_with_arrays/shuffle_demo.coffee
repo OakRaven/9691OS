@@ -1,5 +1,3 @@
-ru = require '../working_with_numbers/random_utils'
-
 suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades']
 values = ['Ace', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven',
   'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King']
@@ -11,17 +9,19 @@ assembleDeck = (deck) ->
       deck.push card
 
 displayDeck = (deck) ->
-  for i in [0..4]
-    card = deck[i]
+  for card in deck[0..4]
     console.log "#{card.value} of #{card.suit}"
 
-shuffle = (collection) ->
-  for i in [1..(collection.length * 100)]
-    indexOne = (ru.getRandomNumber collection.length) - 1
-    indexTwo = (ru.getRandomNumber collection.length) - 1
-    tempItem = collection[indexOne]
-    collection[indexOne] = collection[indexTwo]
-    collection[indexTwo] = tempItem
+getRandomNumber = (maximumValue) ->
+  Math.floor (Math.random() * maximumValue)
+
+shuffle = (array) ->
+  for i in [1..(array.length * 100)]
+    indexOne = getRandomNumber array.length
+    indexTwo = getRandomNumber array.length
+    tempItem = array[indexOne]
+    array[indexOne] = array[indexTwo]
+    array[indexTwo] = tempItem
 
 deck = []
 assembleDeck deck
