@@ -1,19 +1,17 @@
 cradle = require 'cradle'
-db = (new(cradle.Connection)).database 'blog'
+db = (new(cradle.Connection)).database 'test'
 
-displayUser = (user) ->
-  console.log "User email: #{user.email}"
+displayEmployee = (emp) ->
+  console.log "Employee: #{emp.first} #{emp.last}"
 
-key = 'u:mikehatfieeld'
-db.get key, (err, doc) ->
+db.get 'EMP:3', (err, doc) ->
   console.log 'Single Document:'
   unless err?
-    displayUser doc
+    displayEmployee doc
   else
     console.dir err
 
-keys = ['u:tracyouellette', 'u:kenacker']
-db.get keys, (err, docs) ->
+db.get ['EMP:1', 'EMP:5'], (err, docs) ->
   console.log '\nMultiple Documents:'
   unless err?
-    (displayUser item.doc) for item in docs
+    (displayEmployee item.doc) for item in docs

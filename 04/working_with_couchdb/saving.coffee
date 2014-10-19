@@ -1,33 +1,13 @@
 cradle = require 'cradle'
-db = (new(cradle.Connection)).database 'blog'
+db = (new(cradle.Connection)).database 'test'
 
-users = [
-    id: 'u:mikehatfield'
-    type: 'user'
-    email: 'mike.hatfield@somedomain.com'
-    password: '4QrcOUm6Wau+VuBX8g+IPg=='
-    salt: 'a117bd67766d4ca7b1f8131d9fa62089'
-    created: '2014-01-10 14:25'
-    updated: '2014-01-10 14:25'
-  ,
-    id: 'u:tracyouellette'
-    type: 'user'
-    email: 'tracy.ouellette@somedomain.com'
-    password: '4QrcOUm6Wau+VuBX8g+IPg=='
-    salt: 'a117bd67766d4ca7b1f8131d9fa62089'
-    created: '2014-01-10 14:25'
-    updated: '2014-01-10 14:25'
-  ,
-    id: 'u:kenacker'
-    type: 'user'
-    email: 'ken.acker@somedomain.com'
-    password: '4QrcOUm6Wau+VuBX8g+IPg=='
-    salt: 'a117bd67766d4ca7b1f8131d9fa62089'
-    created: '2014-01-10 14:25'
-    updated: '2014-01-10 14:25'
+employees =[
+  { id: 1, first: 'Tracy', last: 'Ouellette', salesYtd: 22246 }
+  { id: 2, first: 'Chris', last: 'Daniel', salesYtd: 3876 }
+  { id: 3, first: 'Jason', last: 'Alexander', salesYtd: 4095 }
+  { id: 4, first: 'Jennifer', last: 'Hannah', salesYtd: 8070 }
+  { id: 5, first: 'Maxx', last: 'Slayde', salesYtd: 2032 }
 ]
 
-saveUser = (user) ->
-  db.save user.id, user
-
-saveUser user for user in users
+for employee in employees
+  db.save "EMP:#{employee.id}", employee

@@ -1,17 +1,11 @@
 cradle = require 'cradle'
-db = (new(cradle.Connection)).database 'blog'
+db = (new(cradle.Connection)).database 'test'
 
-yoda =
-  id: 'sw-yoda'
-  type: 'test'
-  name: 'Yoda'
-
-db.save yoda.id, yoda, (err, res) ->
+db.remove 'EMP:3', (err, res) ->
   unless err?
-    if res.ok
+    console.dir res
+  else
+    console.dir err
 
-      db.remove yoda.id, (err, res) ->
-        unless err?
-          console.dir res
-        else
-          console.dir err
+  db.get 'EMP:3', (err, res) ->
+    console.log err if err?
