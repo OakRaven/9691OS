@@ -1,13 +1,12 @@
-mongo = require 'mongodb'
-server = new mongo.Server('localhost', 27017)
-db = new mongo.Db('test', server, {safe: true})
+MongoClient = require('mongodb').MongoClient
 
 displayEmployee = (emp) ->
   console.log "#{emp.id}\t" +
-    "#{emp.firstName} #{emp.lastName}\t" +
+    "#{emp.first} #{emp.last}\t" +
     "#{emp.salesYtd}"
 
-db.open (err, db) ->
+url = 'mongodb://localhost:27017/test'
+MongoClient.connect url, (err, db) ->
   collection = db.collection 'employees'
 
   # fetch all from collection
@@ -26,13 +25,12 @@ db.open (err, db) ->
     (displayEmployee doc) for doc in docs
 
   # fetch all sorted by first name
-  collection.find({}, {sort: {firstName: 1}}).toArray (err, docs) ->
+  collection.find({}, {sort: {first: 1}}).toArray (err, docs) ->
     console.log "\nALL SORTED BY FIRST NAME"
     (displayEmployee doc) for doc in docs
 
     # fetch all sorted by first name descending
-    collection.find({}, {sort: {firstName: -1}}).toArray (err, docs) ->
+    collection.find({}, {sort: {first: -1}}).toArray (err, docs) ->
       console.log "\nALL SORTED BY FIRST NAME DESCENDING"
       (displayEmployee doc) for doc in docs
       db.close()
-

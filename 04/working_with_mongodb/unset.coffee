@@ -4,5 +4,7 @@ url = 'mongodb://localhost:27017/test'
 MongoClient.connect url, (err, db) ->
   collection = db.collection 'employees'
 
-  collection.remove {id: 3}, (err, res) ->
-    console.dir res
+  collection.update {}, { $unset: { salesYtd: '' } }, { multi: true }, (err, res) ->
+    console.log err if err?
+    console.dir res if res?
+    db.close()

@@ -1,10 +1,9 @@
-mongo = require 'mongodb'
-server = new mongo.Server('localhost', 27017)
-db = new mongo.Db('test', server, {safe: true})
-
-db.open (err, db) ->
+MongoClient = require('mongodb').MongoClient
+url = 'mongodb://localhost:27017/test'
+MongoClient.connect url, (err, db) ->
   unless err?
-    console.log "Connection established..."
-    db.close()
+    console.log 'Connection establisted'
   else
-    console.log "#{err}"
+    console.log err
+
+  db.close()
