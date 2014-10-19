@@ -1,6 +1,6 @@
 sqlite = require 'sqlite3'
 
-db = new sqlite.Database('sample.db')
+db = new sqlite.Database 'sample.db'
 
 createTables = (callback) ->
   sql = "CREATE TABLE [Departments] (
