@@ -1,31 +1,34 @@
 Client = require('node-rest-client').Client
+config = require './service-config'
 
-options =
-  mimetypes:
-    json: [
-      'application/json;charset=UTF-8'
-    ]
+client = new Client config.options
 
-client = new Client(options)
+url = "#{config.rootUrl}/countryInfoJSON"
+client.registerMethod 'getCountryInfo', url, 'GET'
 
-USERNAME = 'beingmikeh'
-URL = 'http://api.geonames.org/countryInfoJSON'
-
-client.registerMethod 'getCountryInfo', URL, 'GET'
-
-getCountryInfo = (countryCode) ->
+getCountryInfo = (countryCode, callback) ->
   args =
     parameters:
-      username: USERNAME
-      country: (countryCode or '')
+      username: config.username
+      country: countryCode or ''
 
-  client.methods.getCountryInfo args, (data, resp) ->
-    result = data.geonames[0]
-    console.log "Country  : #{result.countryName}"
-    console.log "Capital  : #{result.capital}"
-    console.log "Currency : #{result.currencyCode}"
-    console.log "Area     : #{result.areaInSqKm} (sq km)"
-    console.log "Continent: #{result.continentName}\n"
+  req = client.methods.getCountryInfo args, (data, resp) ->
+    if data.geonames
+      callback null, data.geonames[0]
+    else
+      callback "No data returned for #{countryCode}"
+
+  req.on 'error', (err) ->
+    callback err.request.options
 
 countries = ['ca', 'us', 'gb']
-getCountryInfo(countryCode) for countryCode in countries
+for countryCode in countries
+  getCountryInfo countryCode, (err, result) ->
+    if err
+      console.log 'Error', err
+    else
+      console.log "Country  : #{result.countryName}"
+      console.log "Capital  : #{result.capital}"
+      console.log "Currency : #{result.currencyCode}"
+      console.log "Area     : #{result.areaInSqKm} (sq km)"
+      console.log "Continent: #{result.continentName}\n"
