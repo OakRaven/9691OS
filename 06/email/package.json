@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Demonstrating sending emails using CoffeeScript",
   "dependencies": {
-    "nodemailer": "^1.3.0"
+    "nodemailer": "0.7.x"
   },
   "devDependencies": {},
   "author": "M. W. Hatfield <mwhatfield@outlook.com>",

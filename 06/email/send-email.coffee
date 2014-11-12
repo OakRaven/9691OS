@@ -1,11 +1,14 @@
 nodemailer = require 'nodemailer'
-mailerConfig = require './mailer-config'
+config = require './mailer-config'
 
-smtpServer = nodemailer.createTransport 'SMTP', mailerConfig
+smtpServer = nodemailer.createTransport 'SMTP', config
 
 email =
-  from: mailerConfig.sender
-  to: 'Mike Hatfield <mwhatfield@outlook.com>'
+  from: config.sender
+  to: [
+    'Mike Hatfield <mwhatfield@outlook.com>'
+    config.sender
+  ]
   subject: 'Test Email'
   text: 'Holy, it worked!'
   html: '<b>Holy, it worked!</b>'
