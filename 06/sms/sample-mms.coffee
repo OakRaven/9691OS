@@ -1,7 +1,7 @@
 TwilioClient = require 'twilio'
 config = require './twilio-config'
 
-client = new TwilioClient(config.sid, config.token)
+client = new TwilioClient config.sid, config.token
 
 message =
   mediaUrl: 'http://mwhatfield.com/9691OS/cover.jpg'
