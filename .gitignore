@@ -2,3 +2,4 @@
 node_modules
 bower_components
 mailer-config.coffee
+06/s3/config.json
