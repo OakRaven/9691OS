@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Demonstrating sending and receiving files to Amazon's S3 service using CoffeeScript",
   "dependencies": {
-    "aws-sdk": "^2.0.19"
+    "aws-sdk": "^2.0.19",
+    "q": "^1.1.2"
   },
   "devDependencies": {},
   "author": "M. W. Hatfield <mwhatfield@outlook.com>",

@@ -1,12 +1,12 @@
 TwilioClient = require 'twilio'
 config = require './twilio-config'
 
-client = new TwilioClient(config.sid, config.token)
+client = new TwilioClient config.sid, config.token
 
 message =
   body: 'Welcome from CoffeeScript'
-  to: '+15554401212'
-  from: '+15557071212'
+  to: '+1 902-440-4306'
+  from: config.from
 
 client.messages.create message, (err, msg) ->
   if err?

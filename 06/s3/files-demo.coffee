@@ -1,63 +1,79 @@
 AWS = require 'aws-sdk'
-fs = require 'fs'
+fs  = require 'fs'
+Q   = require 'q'
 
 AWS.config.loadFromPath './config.json'
 
 S3 = new AWS.S3()
 
-uploadFile = (bucket, filename, key, callback) ->
-  console.log 'Uploading: ', filename, key
+uploadFile = (bucket, filename, key) ->
+  console.log "Uploading #{filename} -> #{key}"
+  
+  deferred = Q.defer()
+  buffer = fs.readFileSync filename
+  
+  params =
+    Bucket: bucket
+    Key: key
+    Body: buffer
+    ACL: 'public-read'
 
-  fs.readFile filename, (err, fileData) ->
-    params =
-      Bucket: bucket
-      Key: key
-      Body: fileData
-      ACL: 'public-read'
+  S3.putObject params, (err, data) ->
+    if err?
+      deferred.reject err
+    else
+      console.log 'Uploading success:', data
+      deferred.resolve()
 
-    S3.putObject params, (err, data) ->
-      if err?
-        console.log 'Error: ', err
-      else
-        console.log 'Success: ', data
-
-      callback()
+  deferred.promise
 
 
-listAllFiles = (bucket, callback) ->
+listAllFiles = (bucket) ->
   console.log 'Listing all files:'
 
+  deferred = Q.defer()
+  
   params =
     Bucket: bucket
 
   S3.listObjects params, (err, data) ->
     if err?
-      console.log 'Error: ', err
+      deferred.reject err
     else
-      console.log 'Success: ', data
+      if data.Contents
+        for item in data.Contents
+          console.log "  ETag: #{item.ETag}\n" +
+            "  Key:  #{item.Key}\n" +
+            "  Size:  #{item.Size} bytes"
+      deferred.resolve()
 
-    callback()
+  deferred.promise
 
 
-fetchFile = (bucket, key, filename, callback) ->
-  console.log 'Fetching a file:'
+fetchFile = (bucket, key, filename) ->
+  console.log "Fetching a file #{key} -> #{filename}"
 
+  deferred = Q.defer()
+  
   params =
     Bucket: bucket
     Key: key
 
   S3.getObject params, (err, data) ->
     if err?
-      console.log 'Error: ', err
+      deferred.reject err
     else
-      fs.writeFile filename, data.Body, (err) ->
-        console.log 'Success: ', data.ETag, data.ContentType
+      fs.writeFileSync filename, data.Body
+      console.log "Fetching a file success ETag: #{data.ETag}"
+      deferred.resolve()
+      
+  deferred.promise
 
-    callback()
 
-
-deleteFile = (bucket, key, callback) ->
-  console.log 'Deleting: ', key
+deleteFile = (bucket, key) ->
+  console.log "Deleting remote file #{key}"
+  
+  deferred = Q.defer()
 
   params =
     Bucket: bucket
@@ -65,17 +81,20 @@ deleteFile = (bucket, key, callback) ->
 
   S3.deleteObject params, (err, data) ->
     if err?
-      console.log 'Error: ', err
+      deferred.reject err
     else
-      console.log 'Success: ', data
-
-    callback()
+      console.log 'Deleting success'
+      deferred.resolve()
+      
+  deferred.promise
 
 
 bucket = 'demo.mwhatfield.com'
 
-uploadFile bucket, './cover.jpg', 'cover.jpg', ->
-  listAllFiles bucket, ->
-    fetchFile bucket, 'cover.jpg', './cover-2.jpg', ->
-      deleteFile bucket, 'cover.jpg', ->
-        console.log 'Completed.'
+uploadFile bucket, './cover.jpg', 'cover.jpg'
+  .then -> listAllFiles bucket
+  .then -> fetchFile bucket, 'cover.jpg', './cover-2.jpg'
+  .then -> deleteFile bucket, 'cover.jpg'
+  .catch (error) ->
+    console.log "Error: #{error}"
+  .done -> console.log 'Completed.'

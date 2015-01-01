@@ -5,8 +5,8 @@ client = new TwilioClient config.sid, config.token
 
 message =
   mediaUrl: 'http://mwhatfield.com/9691OS/cover.jpg'
-  to: '+15554401212'
-  from: '+15557071212'
+  to: '+1 902-440-4306'
+  from: config.from
 
 client.messages.create message, (err, msg) ->
   if err?
