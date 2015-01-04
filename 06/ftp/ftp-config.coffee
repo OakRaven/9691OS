@@ -1,4 +1,4 @@
 module.exports =
   host: 'mwhatfield.com'
-  user: 'oakra3'
-  password: 'Wiccaman13'
+  user: 'coffee@mwhatfield.com'
+  password: 'c0ffeeScript!'
