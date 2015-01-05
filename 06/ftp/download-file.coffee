@@ -1,46 +1,65 @@
-fs = require 'fs'
+fs     = require 'fs'
 Client = require 'ftp'
+Q      = require 'q'
 config = require './ftp-config'
 
-connect = (callback) ->
-  client = new Client()
-  client.on 'ready', -> callback(null, client)
-  client.on 'error', (err) -> callback(err, null)
-  client.connect config
+FTP_MODE_BIN = 'binary'
+FTP_MODE_ASC = 'ascii'
+connection = null
 
-remote = '/cover.jpg'
-local = 'cover-downloaded.jpg'
+connect = ->
+  console.log 'Connecting'
+  deferred = Q.defer()
+  
+  connection = new Client()
+  connection.on 'ready', ->
+    console.log '   connection established'
+    deferred.resolve()
+  connection.on 'error', (err) ->
+    console.log '   error connecting'
+    deferred.reject err
+  
+  connection.connect config
+  deferred.promise
+  
 
-download = (remote, local, config, callback, mode = 'binary') ->
-  performDownload = (client) ->
-    client.get remote, (err, stream) ->
-      if err?
-        callback err
-      else
-        stream.once 'close', ->
-          client.end()
-          callback()
-        stream.pipe (fs.createWriteStream local)
-
-  modeSelected = (err, client) ->
-    if err?
-      callback err
+setMode = (mode) ->
+  console.log "Setting mode to #{mode}"
+  deferred = Q.defer()
+  
+  connection[mode] (err) ->
+    if err
+      console.log '   error setting mode'
+      deferred.reject err
     else
-      performDownload client
+      console.log "   mode set to #{mode}"
+      deferred.resolve()
+      
+  deferred.promise
+  
 
-  connected = (err, client) ->
+download = (remote, local) ->
+  console.log "Downloading #{remote} to #{local}"
+  deferred = Q.defer()
+  
+  connection.get remote, (err, stream) ->
     if err?
-      callback err
+      deferred.reject err
     else
-      if mode in ['binary', 'bin', 'b']
-        client.binary (err) -> modeSelected err, client
-      else
-        client.ascii (err) -> modeSelected err, client
+      stream.once 'close', ->
+        console.log '   download complete'
+        deferred.resolve()
+      
+      stream.pipe fs.createWriteStream(local)
 
-  connect config, connected
+  deferred.promise
 
-download remote, local, (err) ->
-  if err?
-    console.log "#{err}"
-  else
-    console.log "#{local} download complete"
+  
+connect()
+  .then -> setMode FTP_MODE_BIN
+  .then -> download '/cover.jpg', 'cover-downloaded.jpg'
+  .catch (err) ->
+    console.log "Error:", err
+  .fin ->
+    connection.end() if connection?
+    console.log 'Connection closed'

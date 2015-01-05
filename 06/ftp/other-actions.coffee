@@ -1,71 +1,90 @@
 Client = require 'ftp'
+Q      = require 'Q'
 config = require './ftp-config'
 
-connect = (callback) ->
-  client = new Client()
-  client.on 'ready', -> callback(null, client)
-  client.on 'error', (err) -> callback(err, null)
+connection = null
 
-  client.connect config
+connect = ->
+  console.log 'Connecting'
+  deferred = Q.defer()
 
-getDirectoryList = (rootPath, callback) ->
-  console.log 'Getting list: ', rootPath
-  connected = (err, client) ->
+  connection = new Client()
+  connection.on 'ready', ->
+    console.log '   connection established'
+    deferred.resolve()
+  connection.on 'error', (err) ->
+    console.log '   error connecting'
+    deferred.reject err
+
+  connection.connect config
+  deferred.promise
+
+
+getDirectoryList = (rootPath) ->
+  console.log "Getting list: #{rootPath}"
+  deferred = Q.defer()
+  
+  connection.list rootPath, (err, data) ->
     if err?
-      callback err
+      deferred.reject err
     else
-      client.list rootPath, (err, data) ->
-        client.end()
-        console.dir data
-        console.log '-- Completed'
-        callback()
+      console.dir data
+      console.log '   listing complete'
+      deferred.resolve()
+      
+  deferred.promise
 
-  connect connected
+  
+createDirectory = (directoryName) ->
+  console.log "Creating directory: #{directoryName}"
+  deferred = Q.defer()
 
-createDirectory = (directoryName, callback) ->
-  console.log 'Creating directory: ', directoryName
-  connected = (err, client) ->
+  connection.mkdir directoryName, (err) ->
     if err?
-      callback err
+      deferred.reject err
     else
-      client.mkdir directoryName, (err) ->
-        client.end()
-        console.log '-- Completed'
-        callback()
+      console.log '   create directory completed'
+      deferred.resolve()
+      
+  deferred.promise
+  
+      
+deleteDirectory = (directoryName) ->
+  console.log "Deleting directory: #{directoryName}"
+  deferred = Q.defer()
 
-  connect connected
-
-deleteDirectory = (directoryName, callback) ->
-  console.log 'Deleting directory: ', directoryName
-  connected = (err, client) ->
+  connection.rmdir directoryName, (err) ->
     if err?
-      callback err
+      deferred.reject err
     else
-      client.rmdir directoryName, (err) ->
-        client.end()
-        console.log '-- Completed'
-        callback()
+      console.log '   delete directory completed'
+      deferred.resolve()
+  
+  deferred.promise
 
-  connect connected
 
-deleteFile = (filePath, callback) ->
-  console.log 'Deleting file: ', filePath
-  connected = (err, client) ->
+deleteFile = (filePath) ->
+  console.log "Deleting file: #{filePath}"
+  deferred = Q.defer()
+  
+  connection.delete filePath, (err) ->
     if err?
-      callback err
+      deferred.reject err
     else
-      client.delete filePath, (err) ->
-        client.end()
-        console.log '-- Completed'
-        callback()
+      console.log '   delete file completed'
+      deferred.resolve()
 
-  connect connected
+        
+  deferred.promise
 
 
-connect (client) ->
-  getDirectoryList '/public_html/9691OS', ->
-    createDirectory '/public_html/9691OS/temp', ->
-      deleteDirectory '/public_html/9691OS/temp', ->
-        deleteFile '/public_html/9691OS/cover.jpg', ->
-          console.log 'COMPLETED'
-
+connect()
+  .then -> getDirectoryList '/'
+  .then -> createDirectory '/temp'
+  .then -> deleteDirectory '/temp'
+  .then -> deleteFile '/cover.jpg'
+  .catch (err) ->
+    console.log "Error:", err
+  .fin ->
+    connection.end() if connection?
+    console.log 'Connection closed'

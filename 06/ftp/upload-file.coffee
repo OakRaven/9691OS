@@ -52,13 +52,10 @@ upload = (local, remote) ->
     
   deferred.promise
 
-  
-remote = '/cover.jpg'
-local = 'cover.jpg'
 
 connect()
   .then -> setMode FTP_MODE_BIN
-  .then -> upload local, remote
+  .then -> upload 'cover.jpg', '/cover.jpg'
   .catch (err) ->
     console.log "Error:", err
   .fin ->
