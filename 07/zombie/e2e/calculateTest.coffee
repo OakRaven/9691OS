@@ -3,7 +3,7 @@ assert = require 'assert'
 
 describe 'calculator page', ->
   before ->
-    @browser = new Browser({ site: 'http://localhost:8000/' })
+    @browser = new Browser site: 'http://localhost:8080/'
 
   before ->
     @browser.visit '/index.html'
