@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "coffeescript": "~1.7.1",
     "jasmine": "~2.0.4"
   }
 }
