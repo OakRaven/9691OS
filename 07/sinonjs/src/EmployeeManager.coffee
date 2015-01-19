@@ -1,4 +1,4 @@
-class window.EmployeeManager
+class EmployeeManager
   constructor: (@dataService) ->
     @employees = []
 
