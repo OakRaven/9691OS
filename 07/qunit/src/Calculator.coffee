@@ -4,3 +4,5 @@ class window.Calculator
     sum += value for value in values
     return sum
 
+  subtract: (a, b) ->
+    a - b

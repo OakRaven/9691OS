@@ -1,16 +1,11 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Jasmine Spec Runner v2.0.1</title>
+  <meta charset="UTF-8" />
+  <title>Testing with Sinon</title>
+  <link rel="stylesheet" href="bower_components/qunit/qunit/qunit.css" type="text/css" media="screen">
 
-  <link rel="shortcut icon" type="image/png" href="bower_components/jasmine/images/jasmine_favicon.png">
-  <link rel="stylesheet" type="text/css" href="bower_components/jasmine/lib/jasmine-core/jasmine.css">
-
-  <script src="bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
-  <script src="bower_components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
-  <script src="bower_components/jasmine/lib/jasmine-core/boot.js"></script>
   <script src="bower_components/sinon/lib/sinon.js"></script>
   <script src="bower_components/sinon/lib/sinon/spy.js"></script>
   <script src="bower_components/sinon/lib/sinon/call.js"></script>
@@ -24,17 +19,27 @@
   <script src="bower_components/sinon/lib/sinon/test_case.js"></script>
   <script src="bower_components/sinon/lib/sinon/assert.js"></script>
   <script src="bower_components/sinon/lib/sinon/match.js"></script>
-
-  <!-- include source files here... -->
-  <script src="src/DataManager.js"></script>
-  <script src="src/EmployeeManager.js"></script>
-
-  <!-- include spec files here... -->
-  <script src="spec/EmployeeManagerSpec.js"></script>
-
 </head>
 
 <body>
+  <h1 id="qunit-header">Testing with Sinon</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">
+  </div>
+
+  <script type="text/javascript" src="bower_components/qunit/qunit/qunit.js"></script>
+  <script type="text/javascript" src="bower_components/coffee-script/extras/coffee-script.js"></script>
+
+  <!-- source files -->
+  <script type="text/coffeescript" src="src/DataManager.coffee"></script>
+  <script type="text/coffeescript" src="src/EmployeeManager.coffee"></script>
+
+  <!-- tests -->
+  <script type="text/coffeescript" src="test/EmployeeManagerTest.coffee"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,21 @@
+{
+  "name": "qunit",
+  "version": "0.0.0",
+  "homepage": "https://github.com/OakRaven/9691OS",
+  "authors": [
+    "Mike Hatfield <oakraven13@gmail.com>"
+  ],
+  "description": "QUnit testing example",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "coffee-script": "~1.8.0",
+    "qunit": "~1.17.1"
+  }
+}

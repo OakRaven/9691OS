@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>QUnit Test Suite</title>
+  <link rel="stylesheet" href="bower_components/qunit/qunit/qunit.css" type="text/css" media="screen">
+</head>
+
+<body>
+  <h1 id="qunit-header">BDD Style with QUnit and Pavlov</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="qunit-fixture">
+  </div>
+
+  <script type="text/javascript" src="bower_components/qunit/qunit/qunit.js"></script>
+  <script type="text/javascript" src="bower_components/pavlov/pavlov.js"></script>
+  <script type="text/javascript" src="bower_components/coffee-script/extras/coffee-script.js"></script>
+
+  <!-- source files -->
+  <script type="text/coffeescript" src="src/Calculator.coffee"></script>
+
+  <!-- tests -->
+  <script type="text/coffeescript" src="spec/SpecHelper.coffee"></script>
+  <script type="text/coffeescript" src="spec/CalculatorSpec.coffee"></script>
+
+</body>
+
+</html>

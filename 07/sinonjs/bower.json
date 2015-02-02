@@ -15,7 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "jasmine": "~2.0.4",
-    "sinon": "~1.10.3"
+    "sinon": "~1.10.3",
+    "coffee-script": "~1.8.0",
+    "qunit": "~1.17.1"
   }
 }

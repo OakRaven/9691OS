@@ -1,4 +1,4 @@
-class DataManager
+class window.DataManager
   constructor: ->
 
   fetchEmployees: ->
