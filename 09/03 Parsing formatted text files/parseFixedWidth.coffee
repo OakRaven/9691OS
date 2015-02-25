@@ -54,10 +54,7 @@ minPostDate = moment('2100-01-01').toDate()
 maxPostDate = moment('1900-01-01').toDate()
 
 input = fs.createReadStream 'transactions.txt'
-rl = readline.createInterface
-  input: input
-  output: null
-  terminal: false
+rl = readline.createInterface input: input, terminal: no
 
 rl.on 'line', (line) ->
   record = parseLine line
