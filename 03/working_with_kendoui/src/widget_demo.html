@@ -3,14 +3,14 @@
 
 <head>
   <title>KendoUI Widget Demo</title>
-  <link rel="stylesheet" href="css/kendo.common.min.css">
-  <link rel="stylesheet" href="css/kendo.default.min.css">
+  <link rel="stylesheet" href="kendo/styles/kendo.common.min.css">
+  <link rel="stylesheet" href="kendo/styles/kendo.default.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/lightbox.css">
   <style>
-  .value {
-    color: red;
-  }
+    .value {
+      color: red;
+    }
   </style>
 </head>
 
@@ -74,15 +74,6 @@
       <span id="autocomplete-value" class="value">None</span>
     </div>
 
-    <h2>Grid</h2>
-    <div class="well">
-      <div id="grid"></div>
-      <div style="margin-top: 1em;">
-        Selected employee:
-        <span id="grid-value" class="value">None</span>
-      </div>
-    </div>
-
     <h2>ListView</h2>
     <div class="well">
       <h3>Berry Picking 2012</h3>
@@ -95,17 +86,18 @@
 
   </div>
   <script type="text/x-template" id="album-template">
-    <a href="img/albums/berries-2012/#= filename #"
-      data-lightbox="Berry Picking 2012" title="#= description #">
-      <img src="img/albums/berries-2012/tn_#= filename #"
-        alt="#= description #" class="img-thumbnail">
+    <a href="img/albums/berries-2012/#= filename #" data-lightbox="Berry Picking 2012" title="#= description #">
+      <img src="img/albums/berries-2012/tn_#= filename #" alt="#= description #" class="img-thumbnail">
     </a>
   </script>
 </body>
 
-<script src="js/vendor/jquery.min.js"></script>
-<script src="js/vendor/kendo/kendo.all.min.js"></script>
-<script src="js/vendor/lightbox-2.6.min.js"></script>
-<script src="js/widgets.js"></script>
+<script src="kendo/js/jquery.min.js"></script>
+<script src="kendo/js/kendo.ui.core.min.js"></script>
+<script src="js/vendor/lightbox.min.js"></script>>
+
+<script type="text/coffeescript" src="coffee/widgets.coffee"></script>
+<script src="js/vendor/coffee-script.js"></script>
+
 
 </html>

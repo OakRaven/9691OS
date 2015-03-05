@@ -16,9 +16,6 @@ app.use (express.static __dirname + '/public')
 app.get '/', (req, res) ->
   res.render 'index'
 
-app.get '/time', (req, res) ->
-  res.render 'time'
-
 app.get '/count', (req, res) ->
   res.render 'counter'
 

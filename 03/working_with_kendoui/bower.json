@@ -17,6 +17,7 @@
   "dependencies": {
     "jquery": "1.9.1",
     "bootstrap": "3.0.1",
-    "lightbox": "~2.7.1"
+    "lightbox": "~2.7.1",
+    "kendo-ui-core": "~2014.3.1425"
   }
 }
