@@ -7,7 +7,7 @@ DEPARTMENTS = [
 imageDataSource = new kendo.data.DataSource
   transport:
     read:
-      url: 'data/images.json'
+      url: 'data/gallery.json'
       dataType: 'json'
   schema:
     data: (data) ->
