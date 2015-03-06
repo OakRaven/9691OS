@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="kendo/styles/kendo.mobile.all.min.css">
+</head>
+<body>
+  <!-- interesting things go here -->
+  <div id="foo" data-role="view" data-title="My First View">
+    <!-- view header -->
+    <header data-role="header">
+      <div data-role="navbar">
+        <span data-role="view-title"></span></div>
+    </header>
+
+    <h1>This is my view content</h1>
+
+    <!-- view footer -->
+    <footer>
+      <div data-role="navbar">
+        <span>Footer</span>
+      </div>
+    </footer>
+  </div>
+  
+  <script src="kendo/js/jquery.min.js"></script>
+  <script src="kendo/js/kendo.ui.core.min.js"></script>
+  <script type="text/coffeescript" src="coffee/app.coffee"></script>
+  <script type="text/coffeescript">
+    app.init document.body
+  </script>
+  <script src="http://coffeescript.org/extras/coffee-script.js"></script>
+</body>
+</html>
