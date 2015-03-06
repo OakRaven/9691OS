@@ -15,7 +15,7 @@ imageDataSource = new kendo.data.DataSource
 
 $ ->
   progressBar = $('#progressbar')
-    .kendoProgressBar(value: 50)
+    .kendoProgressBar value: 50
     .data 'kendoProgressBar'
 
   $('#slider').kendoSlider
@@ -33,22 +33,28 @@ $ ->
       $('#datetimepicker-value').text @value()
 
   $('#dropdownlist').kendoDropDownList
-    dataSource: DEPARTMENTS
+    dataSource:
+      data: DEPARTMENTS
+      sort:
+        dir: 'asc'
     optionLabel: 'Select...'
     change: ->
       $('#dropdownlist-value').text @value()
 
-  $('#autocomplete').kendoAutoComplete
-    dataSource: DEPARTMENTS
-    filter: 'contains'
-    change: ->
-      $('#autocomplete-value').text @value()
+$('#autocomplete').kendoAutoComplete
+  dataSource:
+    data: DEPARTMENTS
+    sort:
+      dir: 'asc'
+  filter: 'contains'
+  change: ->
+    $('#autocomplete-value').text @value()
 
-  $('#listview').kendoListView
-    dataSource: imageDataSource
-    template: kendo.template $('#album-template').html()
-    selectable: true
-    change: ->
-      selectedIndex = @select().index()
-      image = @dataSource.view()[selectedIndex]
-      $('#listview-value').text image.description
+$('#listview').kendoListView
+  dataSource: imageDataSource
+  template: kendo.template $('#album-template').html()
+  selectable: true
+  change: ->
+    selectedIndex = @select().index()
+    image = @dataSource.view()[selectedIndex]
+    $('#listview-value').text image.description
