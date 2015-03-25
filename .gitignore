@@ -2,6 +2,6 @@
 node_modules
 bower_components
 mailer-config.coffee
-06/s3/config.json
+08/s3/config.json
 twilio-config.coffee
 .DS_Store
